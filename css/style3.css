@@ -474,6 +474,10 @@ details[open] summary {
 
 /* Ícone da seta */
 .arrow {
+	content: "▶";
+	color: black;
+	background: none;
+	margin-right: 0.5rem;
 	transition: transform 0.3s ease;
 }
 
