@@ -230,107 +230,6 @@ section {
 
 
 
-.btn-animacao {
-	position: absolute;
-	left: 10px;
-	/* encostado à esquerda da div */
-	top: 50%;
-	/* centraliza verticalmente */
-	transform: translateY(-50%);
-
-	width: 100px;
-	/* largura do círculo */
-	height: 100px;
-	/* altura do círculo */
-	border-radius: 50%;
-	/* deixa redondo */
-
-	background: #f0f0f0;
-	/* cinza claro */
-	border: none;
-	font-weight: bold;
-	cursor: pointer;
-
-	display: flex;
-	/* centraliza o símbolo dentro */
-	justify-content: center;
-	align-items: center;
-
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	transition: background 0.3s, transform 0.2s;
-}
-
-
-.btn-animacao:hover {
-	background: #e0e0e0;
-	/* cinza um pouco mais escuro */
-	transform: translateY(-50%) scale(1.1);
-	/* cresce no hover */
-}
-
-
-
-.popup {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	justify-content: center;
-	align-items: center;
-	z-index: 9999;
-}
-
-
-.popup-conteudo {
-	position: relative;
-	background: #fff;
-	width: 685px;
-	height: 600px;
-	border-radius: 0;
-	overflow: hidden;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0;
-}
-
-
-.fechar {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	font-size: 28px;
-	font-weight: bold;
-	color: #fff;
-	background: rgba(0, 0, 0, 0.6);
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	line-height: 40px;
-	cursor: pointer;
-	z-index: 10000;
-	transition: background 0.3s;
-}
-
-.fechar:hover {
-	background: rgba(0, 0, 0, 0.8);
-}
-
-
-.popup-conteudo iframe {
-	width: 100%;
-	height: 100%;
-	border: none;
-	display: block;
-}
-
-
-
 
 
 
@@ -366,6 +265,8 @@ section {
 	height: auto;
 	display: block;
 }
+
+
 
 
 
@@ -505,32 +406,100 @@ details[open] .arrow {
 
 
 
-
-
-
-
-
-
-.btn {
-	display: inline-block;
-	padding: 14px 26px;
-	background: var(--main-color);
-	color: var(--bg-color);
-	font-size: 15px;
-	font-weight: 600;
-	border-radius: 5rem;
-	transition: all .38s ease;
+.btn-animacao {
+	position: absolute;
+	left: 10px;
+	top: 40%;
+	transform: translateY(-50%);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #f0f0f0;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: background 0.3s, transform 0.2s;
 }
 
-.btn:hover {
-	letter-spacing: 1px;
+
+.btn-animacao:hover {
+	background: #e0e0e0;
+	/* cinza um pouco mais escuro */
+	transform: translateY(-50%) scale(1.1);
+	/* cresce no hover */
 }
 
-header.sticky {
-	padding: 10px 15%;
-	background: var(--bg-color);
-	box-shadow: 0px 4px 15px rgb(0 0 0 / 8%);
+
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
 }
+
+
+.popup-conteudo {
+	position: relative;
+	background: #fff;
+	width: 685px;
+	height: 600px;
+	border-radius: 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+
+.fechar {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	z-index: 10000;
+	transition: background 0.3s;
+}
+
+.fechar:hover {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+
+.popup-conteudo iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+
+
+
+
+
+
 
 
 
@@ -645,6 +614,13 @@ header.sticky {
 	height: auto;
 	border-radius: 10px;
 }
+
+header.sticky {
+	padding: 10px 15%;
+	background: var(--bg-color);
+	box-shadow: 0px 4px 15px rgb(0 0 0 / 8%);
+}
+
 
 .row {
 	transition: all .40s ease;
