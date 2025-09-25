@@ -44,7 +44,7 @@ const sr = ScrollReveal ({
 	reset: true
 })
 sr.reveal('.home-text',{delay:200, origin:'left'});
-sr.reveal('.videos',{delay:200, origin:'left', });
+//sr.reveal('.videos',{delay:200, origin:'left', });
 if (mediaMinQuery.matches) {
 	sr.reveal('.about-img',{delay:200, origin:'right'});
     sr.reveal('.material-img',{delay:200, origin:'right'});
