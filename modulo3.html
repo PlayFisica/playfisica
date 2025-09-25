@@ -88,39 +88,39 @@
 
     <!------------------------------MATERIAIS------------------------------>
 
-    <section class="materials" id="materiais">
+    <section class="materials" id="material">
         <div class="materials-container">
-            <h1>Materiais de Aula</h1>
+            <h1>Material das Aulas</h1>
 
             <div class="lesson">
                 <h2>1. Primeira Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Primeira Lei de Newton, ou Lei da Inércia, estabelece que um objeto permanece em seu estado de repouso ou movimento retilíneo uniforme, a menos que uma força resultante atue sobre ele. A imagem ilustra esse conceito, mostrando que se a força resultante é zero, a velocidade do objeto não muda. Para aplicar essa lei em P5.js, é necessário entender operações matemáticas e comparativas, e a estrutura de controle 'if'.</p>
+                <p class="lesson-summary">A Primeira Lei de Newton, ou Lei da Inércia, estabelece que um objeto permanece em seu estado de repouso ou movimento retilíneo uniforme, a menos que uma força resultante atue sobre ele. A imagem ilustra esse conceito, mostrando que se a força resultante é zero, a velocidade do objeto não muda. Para aplicar essa lei em P5.js, é necessário entender operações matemáticas e comparativas, e a estrutura de controle if.</p>
                 <div class="lesson-image">
                     <img src="img/MateriaisDasAulas/21 - 1_Lei_newton.png" alt="Primeira Lei de Newton (Lei da Inércia) e sua aplicação em P5.js">
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=GT5JRtmZQ_U" target="_blank">Vídeo Aula</a>
-                    <a href="#v38">Exercício Complementar</a>
+                    <a href="#ex14">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> 
+                    <strong>Observação:</strong> Note como a Primeira Lei de Newton, ou Lei da Inércia, é fundamental para entender o movimento dos objetos. Se a força resultante sobre um objeto for zero (Fr = 0), ele manterá seu estado atual: um objeto em repouso permanecerá em repouso, e um objeto em movimento continuará em movimento com velocidade e direção constantes. A única forma de alterar esse estado é aplicando uma força. Em P5.js, isso se traduz em posicaox = posicaox + velocidade; e posicaoy = posicaoy + velocidade, onde a velocidade constante (ou zero) resulta em um Movimento Retilíneo Uniforme (MRU) ou ausência de movimento.
                 </div>
             </div>
 
-            <!-- Aula 2 -->
+
+ 
             <div class="lesson">
-                <h2>2. Estruturas Condicionais (IF)</h2>
-                <p class="lesson-summary">Resumo: Estruturas condicionais no P5.js, operadores comparativos e lógica
-                    condicional.</p>
+                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um Movimento Retilíneo Uniformemente Variado (MRUV).</p>
                 <div class="lesson-image">
                     <img src="img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
                 </div>
                 <div class="lesson-links">
-                    <a href="https://www.youtube.com/watch?v=U5pWI95cydM" target="_blank">Vídeo Aula</a>
-                    <a href="#">Exercício Complementar</a>
+                    <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Pratique criando pequenos programas que utilizem diferentes condições.
+                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
                 </div>
             </div>
 
@@ -140,17 +140,16 @@
             <h1>Exercícios</h1>
 
 
-            <div class="exercicio-item">
-                <h2>Exercício 9</h2>
+            <div class="exercicio-item" id="ex14">
+                <h2>Exercício 14</h2>
                 <div class="exercicios-img">
-                    <img src="img/MateriaisDasAulas/exercicio9.png" alt="Exercício 9" ">
+                    <img src="animations/14/14.png" alt="Exercício 9" ">
 				<button class=" btn-animacao" onclick="abrirPopup()"><img src="img/play.png" alt="Play"></button>
                     <!-- Popup escondido -->
                     <div id="popup" class="popup">
                         <div class="popup-conteudo">
                             <span class="fechar" onclick="fecharPopup()">&times;</span>
-                            <!-- Agora carrega a animação local -->
-                            <iframe class="animation" src="animations/9/animation9.html" frameborder="0"></iframe>
+                            <iframe class="animation" src="animations/14/14.html" frameborder="0"></iframe>
                         </div>
                     </div>
 
@@ -161,7 +160,7 @@
                         </summary>
                         <div class="resposta">
                             <div class="exercicios-img">
-                                <img src="img/code9.png" alt="Exercício 8">
+                                <img src="animations/14/code14.png" alt="Exercício 8">
                             </div>
                         </div>
                     </details>
@@ -184,7 +183,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- custom js link -->
-    <script type="text/javascript" src="js/script2.js"></script>
+    <script type="text/javascript" src="js/scriptModulos.js"></script>
 
 </body>
 
