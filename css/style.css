@@ -313,56 +313,6 @@ span.modulo-text {
 
 /*---------------------------BENEFICIOS---------------------------*/
 
-/*
-
-.beneficios{
-	margin: 3rem 0.6rem;
-	padding: 0;
-}
-
-.beneficios h1{
-	text-align: center;
-	font-size: var(--big-font);
-}
-
-
-.beneficios-box{
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 2rem;
-	align-items: center;
-	margin-top: 4rem;
-}
-
-.beneficios a{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1.4rem;
-	border-radius: 10px;
-	height: 90px;
-	background: var(--main-color);
-	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-	transition: all .40s ease;
-}
-
-
-span.beneficios-text {
-	font-size: var(--p-font);
-	font-weight: 500;
-	color: inherit;        
-  	text-decoration: none; 
-	color: var(--text-color);
-	text-align: center;
-}
-.beneficios a:hover{
-	transform: translateX(7px);
-	cursor: pointer;
-}
-
-
-*/
-
 .beneficios {
   margin: 3rem 1rem;
   padding: 0;
@@ -406,7 +356,15 @@ span.beneficios-text {
   font-weight: 500;
   color: var(--text-color);
   line-height: 1.6;
+  text-align: center;
 }
+
+
+
+
+
+
+
 
 
 
@@ -520,9 +478,6 @@ header.sticky{
 .row:hover{
 	transform: scale(1.02);
 }
-.benefícios{
-	padding: 1%;
-}
 .main-contact{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -570,6 +525,17 @@ header.sticky{
 	border-radius: 5rem;
 }
 
+
+
+
+
+
+
+
+
+/*---------------------------CELULAR, NOTEBOOK---------------------------*/
+
+
 @media (max-width: 1690px){
 	section{
 		padding: 70px 2%;
@@ -593,6 +559,7 @@ header.sticky{
 	}
 	
 }
+
 @media (max-width: 1290px){
 	section{
 		padding: 80px 2%;
@@ -614,6 +581,7 @@ header.sticky{
 	}
 	
 }
+
 @media (max-width: 880px){
 	#menu-icon{
 		display: block;
@@ -675,6 +643,10 @@ header.sticky{
 		width: 100%;
 	}
 }
+
+
+
+
 
 
 .topicos {
