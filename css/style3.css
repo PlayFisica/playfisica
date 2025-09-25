@@ -375,11 +375,20 @@ section {
 .exercicio-item {
 	margin-bottom: 2rem;
 	padding: 1rem;
-	border: 1px solid #ddd;
+	border: 2px solid #ddd;
 	border-radius: 12px;
 	background: #f9f9f9;
 	align-items: center;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s, box-shadow 0.3s;
 }
+
+
+.exercicio-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
 
 .exercicio-item h2 {
 	font-size: 2rem;
@@ -390,7 +399,7 @@ section {
 
 
 .exercicios {
-	padding: 0.3rem;
+	padding: 1.5rem;
 	width: 100%;
 	align-items: center;
 }
