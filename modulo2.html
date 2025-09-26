@@ -1,134 +1,467 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Em construção — PlayFísica - Módulo 4</title>
-  <style>
-    :root{
-      --bg: #0f1724;
-      --card: #0b1220;
-      --accent: #ffb020;
-      --muted: #9aa4b2;
-      --glass: rgba(255,255,255,0.03);
-      --radius: 14px;
-      font-family: 'Raleway', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayFísica</title>
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      display:grid;
-      place-items:center;
-      background: linear-gradient(180deg,#071127 0%, #0f1724 100%);
-      color: #e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:24px;
-    }
+    <link rel="stylesheet" href="css/styleMA.css">
 
-    .card{
-      width:min(880px,96%);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      padding:36px;
-      display:flex;
-      gap:28px;
-      align-items:center;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.03);
-    }
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    .emoji{
-      flex:0 0 160px;
-      height:160px;
-      border-radius:12px;
-      display:grid;
-      place-items:center;
-      background: linear-gradient(135deg, rgba(255,176,32,0.12), rgba(255,176,32,0.06));
-      font-size:68px;
-      color:var(--accent);
-      box-shadow: 0 8px 30px rgba(255,176,32,0.06);
-    }
-
-    .content{
-      flex:1 1 auto;
-    }
-
-    h1{
-      font-size:clamp(24px,4vw,42px);
-      margin-bottom:8px;
-      color:#fff;
-      letter-spacing: -0.6px;
-    }
-
-    p.lead{
-      color:var(--muted);
-      margin-bottom:18px;
-      font-size:clamp(14px,1.4vw,16px);
-    }
-
-    .bar{
-      height:12px;
-      background: linear-gradient(90deg, rgba(255,176,32,0.18), rgba(255,176,32,0.07));
-      border-radius:999px;
-      overflow:hidden;
-      position:relative;
-    }
-    .bar::after{
-      content:"";
-      position:absolute;
-      left:-40%;
-      top:0;bottom:0;
-      width:40%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
-      animation: shine 2.2s linear infinite;
-    }
-
-    @keyframes shine{
-      from{left:-40%}
-      to{left:140%}
-    }
-
-    .meta{
-      display:flex;
-      gap:12px;
-      margin-top:16px;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .btn{
-      margin-left:auto;
-      background:transparent;
-      border:1px solid rgba(255,255,255,0.06);
-      padding:8px 14px;
-      border-radius:10px;
-      color:var(--muted);
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    @media (max-width:720px){
-      .card{flex-direction:column;align-items:stretch;padding:22px}
-      .emoji{width:100%;height:84px;border-radius:10px;font-size:44px}
-      .btn{margin:12px 0 0 auto}
-    }
-  </style>
 </head>
-<body>
-  <main class="card" role="main" aria-labelledby="titulo">
-    <div class="emoji" aria-hidden="true">🏗️</div>
-    <div class="content">
-      <h1 id="titulo">Em construção</h1>
-      <p class="lead">Esta página será construída em breve. Volte mais tarde para conferir os conteúdos do PlayFísica.</p>
 
-      <div class="bar" aria-hidden="true" style="margin-bottom:6px"></div>
-      <div class="meta">
-        <div>status: <strong>em desenvolvimento</strong></div>
-        <a class="btn" href="index.html">Voltar ao início</a>
-      </div>
+<body>
+    <!-- header section -->
+    <header>
+        <!-- <a href="#" class="logo">Food<span>Fun</span></a> -->
+        <a href="index.html" style="border: 0;" class="logo"><img src="img/logo.png" width="80%" alt="logo"></a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#material">Material</a></li>
+            <li><a href="#exercicios">Exercícios</a></li>
+
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+    </header>
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1><span>Módulo 2:</span> Variáveis, Operações (comparativas e  matemáticas), MRU, MRUV, Queda Livre, Lançamento (vertical, horizontal e Oblíquo), If, Else, If Else</h1>
+        </div>
+
+        <div class="home-img">
+            <img src="img/home.png" alt="home">
+        </div>
+    </section>
+
+    <hr class="divisor">
+
+
+
+
+    <!------------------------------VIDEOS------------------------------>
+
+    <section class="videos" id="aulas">
+        <h1>Aulas</h1>
+        <br><br>
+        <div class="videos-text">
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/t2r3iS5aPlU" allowfullscreen></iframe>
+                </div>
+                <p> 20 | Módulo 2: Variável e Atribuição no P5.js (PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/KCLq8rIOuDA" allowfullscreen></iframe>
+                </div>
+                <p> 21 | Módulo 2: Operações Matemáticas, Operações Comparativas e o If no P5.js (PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/U5pWI95cydM" allowfullscreen></iframe>
+                </div>
+                <p> 22 | Módulo 2: Movimento Retilíneo Uniforme no P5.js (PlayFísica) </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/qh-2ebjl5cw" allowfullscreen></iframe>
+                </div>
+                <p> 23 | Módulo 2: Mais Aplicações do MRU no P5.js (PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/dhf-9c3J9BM" allowfullscreen></iframe>
+                </div>
+                <p> 24 | Módulo 2: Desenhando com Movimento usando Linguagem de Programação (Exercício 8 - PlayFísica)
+                </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/4JftxNx5go" allowfullscreen></iframe>
+                </div>
+                <p> 25 | Módulo 2: Movimento Retilíneo Uniforme na diagonal no P5.js (PlayFísica) </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/7hFHx1zRd4A" allowfullscreen></iframe>
+                </div>
+                <p> 26 | Módulo 2: Movimento Retilíneo Uniformemente Variado no P5.js (PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/W01xLl65P3c" allowfullscreen></iframe>
+                </div>
+                <p> 27 | Módulo 2: Desenhando com Movimento usando o P5.js (Exercício 9 - PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/Hkta5bcReeE" allowfullscreen></iframe>
+                </div>
+                <p> 28 | Módulo 2: Queda Livre no P5.js (PlayFísica) </p>
+            </div>
+
+
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/FuQ3h0UJUIY" allowfullscreen></iframe>
+                </div>
+                <p> 29 | Módulo 2: Desenhando com Movimento usando o P5.js (Exercício 10 - PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/lg0845LBNxQ" allowfullscreen></iframe>
+                </div>
+                <p> 30 | Módulo 2: Lançamento Vertical no P5.js (PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/oWe4Zxh33HY" allowfullscreen></iframe>
+                </div>
+                <p> 31 | Módulo 2: Desenhando com Movimento usando o P5.js (Exercicio 11 - PlayFísica) </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/NcPOPo6e5vI" allowfullscreen></iframe>
+                </div>
+                <p> 32 | Módulo 2: Lançamento Horizontal no P5.js (PlayFísica) </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/mDpqXtlOssU" allowfullscreen></iframe>
+                </div>
+                <p> 33 | Módulo 2: Desenhando com Movimento usando o P5.js (Exercício 12 - PlayFísica) </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/bSyuVhZHZ9w" allowfullscreen></iframe>
+                </div>
+                <p> 34 | Módulo 2: Lançamento Oblíquo no P5.js (PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/dTRrArtw6-A" allowfullscreen></iframe>
+                </div>
+                <p> 35 | Módulo 2: Desenhando com Movimento usando o P5.js (Exercício 13 - PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/t7nhtPJEKIs" allowfullscreen></iframe>
+                </div>
+                <p> 36 | MóduIo 2: Estrutura "If else" no P5.js (PlayFísica) </p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <hr class="divisor">
+
+
+    <!------------------------------MATERIAIS------------------------------>
+
+    <section class="materials" id="material">
+        <div class="materials-container">
+            <h1>Material das Aulas</h1>
+
+            <div class="lesson">
+                <h2>1. Variáveis e Atribuição em P5.js</h2>
+                <p class="lesson-summary">Uma Variável é definida como um espaço da memória que armazena informações (como
+                    números ou textos) que podem ser alteradas ao longo do tempo. Toda variável recebe um rótulo (nome) que
+                    serve para acessarmos e modificarmos seu conteúdo. O processo envolve a Declaração (usando a palavra-chave
+                    let), que reserva esse espaço na memória, e a Atribuição (símbolo '=') , que insere o
+                    valor desejado nessa variável, como mostrado no exemplo let velocidade = 10.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/11 -Variável e Atribuição.png" alt="Variável e Atribuição">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=t2r3iS5aPlU" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Fique atento à diferença de propósito:
+                    <ul>
+                        <li>O comando <strong>let</strong> é usado para declarar (reservar) a variável na memória.</li>
+                        <li>O símbolo <strong>=</strong> é o operador de atribuição, que armazena um valor na variável.</li>
+                    </ul>
+                    Lembre-se que, ao atribuir um novo valor, o valor anterior é sobrescrito (perdido), o que é
+                    essencial para atualizar dados como a posição e velocidade em simulações de física no P5.js.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>2. Operações Matemáticas, de Comparação e Estrutura Condicional If</h2>
+                <p class="lesson-summary">O estudo de operações matemáticas (adição, subtração, multiplicação e divisão) é usado para realizar cálculos. As operações de comparação (maior que, menor que, igual a, diferente de) verificam condições, sempre retornando um resultado lógico (true - verdadeiro ou false - falso). A estrutura condicional if ("se" em inglês) verifica uma condição: se for verdadeira, o código dentro do bloco é executado; se for falsa, o código é ignorado. O uso combinado dessas ferramentas é essencial para criar a lógica e o controle de fluxo na programação, como exemplificado no P5.js com as variáveis de posição.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/12 - Operações e If.png" alt="Variável e Atribuição">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=KCLq8rIOuDA" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> É crucial entender que as Operações de Comparação sempre retornam um resultado Booleano (true ou false). Este resultado é a condição que o comando if verifica para decidir se o bloco de comandos deve ser executado ou ignorado, sendo fundamental para o controle de fluxo do código. As operações matemáticas também são usadas para criar as condições a serem verificadas (ex: posicaox + 10 < posicaoy).
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+    <hr class="divisor">
+
+
+
+
+
+    <section class="exercicios" id="exercicios">
+        <div class="exercicios-text">
+            <h1>Exercícios</h1>
+
+
+            <div class="exercicio-item" id="ex8">
+                <h2>Exercício 08</h2>
+                <div class="exercicios-img">
+                    <img src="animations/8/8.png" alt="Exercício 8" ">
+				<button class=" btn-animacao" onclick="abrirPopup(8)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup8" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(8)">&times;</span>
+                            <iframe class="animation" src="animations/8/8.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/8/code8.png" alt="Exercício 8">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+            <div class="exercicio-item" id="ex9">
+                <h2>Exercício 9</h2>
+                <div class="exercicios-img">
+                    <img src="animations/9/9.png" alt="Exercício 9" ">
+				<button class=" btn-animacao" onclick="abrirPopup(9)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup9" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(9)">&times;</span>
+                            <iframe class="animation" src="animations/9/9.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/9/code9.png" alt="Exercício 9">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+            <div class="exercicio-item" id="ex10">
+                <h2>Exercício 10</h2>
+                <div class="exercicios-img">
+                    <img src="animations/10/10.png" alt="Exercício 10" ">
+				<button class=" btn-animacao" onclick="abrirPopup(10)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup10" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(10)">&times;</span>
+                            <iframe class="animation" src="animations/10/10.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/10/code10.png" alt="Exercício 10">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+            
+            <div class="exercicio-item" id="ex11">
+                <h2>Exercício 11</h2>
+                <div class="exercicios-img">
+                    <img src="animations/11/11.png" alt="Exercício 11" ">
+				<button class=" btn-animacao" onclick="abrirPopup(11)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup11" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(11)">&times;</span>
+                            <iframe class="animation" src="animations/11/11.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/11/code11.png" alt="Exercício 11">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+            
+            <div class="exercicio-item" id="ex12">
+                <h2>Exercício 12</h2>
+                <div class="exercicios-img">
+                    <img src="animations/12/12.png" alt="Exercício 12" ">
+				<button class=" btn-animacao" onclick="abrirPopup(12)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup12" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(12)">&times;</span>
+                            <iframe class="animation" src="animations/12/12.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/12/code12.png" alt="Exercício 12">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+            
+            <div class="exercicio-item" id="ex13">
+                <h2>Exercício 13</h2>
+                <div class="exercicios-img">
+                    <img src="animations/13/13.png" alt="Exercício 13" ">
+				<button class=" btn-animacao" onclick="abrirPopup(13)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup13" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(13)">&times;</span>
+                            <iframe class="animation" src="animations/13/13.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/13/code13.png" alt="Exercício 13">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            
+    </section>
+
+    <div class="last-text">
+        <p>© Developed 2025 by Gustavo</p>
     </div>
-  </main>
+
+
+    <!-- scroll top -->
+    <a href="#home" class="scroll-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!-- custom scrollreveal link -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- custom js link -->
+    <script type="text/javascript" src="js/scriptModulos.js"></script>
+
 </body>
+
 </html>

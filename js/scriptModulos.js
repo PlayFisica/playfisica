@@ -12,20 +12,18 @@ let navbar = document.querySelector('.navbar');
 
 
 
-
-function abrirPopup() {
-  const popup = document.getElementById("popup");
+function abrirPopup(num) {
+  const popup = document.getElementById("popup" + num);
   const iframe = popup.querySelector("iframe");
+
   // Recarrega o iframe sempre que abrir
   iframe.src = iframe.src;
-
   popup.style.display = "flex";
 }
-function fecharPopup() {
-  document.getElementById("popup").style.display = "none";
+
+function fecharPopup(num) {
+  document.getElementById("popup" + num).style.display = "none";
 }
-
-
 
 
 menu.onclick = () => {
