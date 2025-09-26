@@ -207,7 +207,7 @@
                     let), que reserva esse espaço na memória, e a Atribuição (símbolo '=') , que insere o
                     valor desejado nessa variável, como mostrado no exemplo let velocidade = 10.</p>
                 <div class="lesson-image">
-                    <img src="img/MateriaisDasAulas/11 -Variável e Atribuição.png" alt="Variável e Atribuição">
+                    <img src="img/MateriaisDasAulas/11 -Variável e Atribuição.png" >
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=t2r3iS5aPlU" target="_blank">Vídeo Aula</a>
@@ -228,7 +228,7 @@
                 <h2>2. Operações Matemáticas, de Comparação e Estrutura Condicional If</h2>
                 <p class="lesson-summary">O estudo de operações matemáticas (adição, subtração, multiplicação e divisão) é usado para realizar cálculos. As operações de comparação (maior que, menor que, igual a, diferente de) verificam condições, sempre retornando um resultado lógico (true - verdadeiro ou false - falso). A estrutura condicional if ("se" em inglês) verifica uma condição: se for verdadeira, o código dentro do bloco é executado; se for falsa, o código é ignorado. O uso combinado dessas ferramentas é essencial para criar a lógica e o controle de fluxo na programação, como exemplificado no P5.js com as variáveis de posição.</p>
                 <div class="lesson-image">
-                    <img src="img/MateriaisDasAulas/12 - Operações e If.png" alt="Variável e Atribuição">
+                    <img src="img/MateriaisDasAulas/12 - Operações e If.png" >
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=KCLq8rIOuDA" target="_blank">Vídeo Aula</a>
@@ -238,7 +238,67 @@
                 </div>
             </div>
 
+            <div class="lesson">
+                <h2>3. Movimento Retilíneo Uniforme (MRU)</h2>
+                <p class="lesson-summary">O Movimento Retilíneo Uniforme (MRU) descreve um objeto que se move em linha reta com velocidade constante. Isso significa que o objeto percorre a mesma distância em intervalos de tempo iguais e não há aceleração. A fórmula fundamental para o MRU é S=S0+v⋅t, onde S é a Posição Final, S0 é a Posição Inicial, v é a Velocidade (constante) e t é o Tempo decorrido.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/13 - MRU.png" >
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=U5pWI95cydM" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> No P5.js, o princípio do MRU é aplicado no código por meio da atualização contínua da posição do objeto, frame a frame, usando a fórmula simplificada posicao = posicao + velocidade;. A velocidade pode ser um valor positivo para movimento em um sentido ou um valor negativo para movimento no sentido oposto (como da direita para a esquerda). Para criar o efeito visual de movimento, a cada frame, o valor da posição é atualizado, o plano de fundo é redesenhado (apagando o objeto anterior) e a forma (círculo) é redesenhada na nova posição.
+                </div>
+            </div>
 
+            <div class="lesson">
+                <h2>4. Movimento Retilíneo Uniforme na Diagonal (MRU na Diagonal)</h2>
+                <p class="lesson-summary">O Movimento Uniforme na Diagonal é a combinação de dois movimentos independentes: um no eixo horizontal (x) e outro no eixo vertical (y). Isso significa que a velocidade horizontal (Vx) e a velocidade vertical (Vy) são constantes. A cada quadro da animação, o objeto avança um pouco em x e um pouco em y, mantendo a fórmula básica de posição S=S0+V⋅t aplicada em ambas as direções.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/14 - MRU na Diagonal.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=14JftxNx5go" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Para que o movimento na diagonal fique perfeitamente alinhado e a bolinha não avance muito mais em uma direção do que na outra, a proporção entre as velocidades (Vx/Vy) deve ser a mesma que a proporção entre a largura (L) e a altura (A) da tela. No P5.js, o movimento é simulado somando-se as velocidades separadamente: posX = posX + velocidadeX; e posY = posY + velocidadeY;. Para o objeto "quicar" nas bordas, a estrutura if é usada para inverter a velocidade (multiplicar por -1) quando a posição do objeto atinge o limite da tela.
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h2>5. Movimento Retilíneo Uniformemente Variado (MRUV)</h2>
+                <p class="lesson-summary">O Movimento Retilíneo Uniformemente Variado (MRUV) é um movimento em linha reta onde a velocidade varia ao longo do tempo, baseada em uma aceleração constante. A aceleração é a taxa de variação da velocidade. Se a aceleração for positiva, a velocidade aumenta. Se a aceleração for negativa, a velocidade diminui (desaceleração). A fórmula da velocidade é dada por V=V0​+a⋅t, onde V é a Velocidade Final, V0​ é a Velocidade Inicial, a é a aceleração e t é o tempo.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/15 - MRUV.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=7hFHx1zRd4A" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>No P5.js, o MRUV é aplicado a cada "quadro" ou frame do programa. Para simular a mudança de velocidade e posição causada pela aceleração, duas etapas de atualização são necessárias: 
+                    <br> Atualizar a Velocidade: velocidade = velocidade + aceleracao; 
+                    <br> Atualizar a Posição: Em seguida, usa-se a nova velocidade para calcular a nova posição: posicao = posicao + velocidade; 
+                    <br>O movimento para a esquerda ocorre quando a aceleração é negativa (desaceleração) ou o sinal das operações de atualização é subtraído: velocidade = velocidade - aceleracao;.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>6. Queda Livre</h2>
+                <p class="lesson-summary">Queda Livre é o movimento de um objeto sob a única influência da gravidade. A gravidade é a aceleração, cujo valor aproximado é 9,8 m/s2 (≈10 m/s2). A aceleração da gravidade age sempre na mesma direção: para baixo. A gravidade é considerada positiva e a velocidade inicial (V0) é zero. A fórmula da velocidade é dada por V=V0​+g⋅t, onde V é a Velocidade Final, V0​ é a Velocidade Inicial, g é a gravidade e t é o tempo.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/16 - Queda_Livre.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=Hkta5bcReeE" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Na aplicação em P5.js, a cada frame (quadro), o programa simula a Queda Livre calculando a nova velocidade do objeto usando a gravidade. Em seguida, ele usa essa nova velocidade para calcular a nova posição. Como a gravidade afeta a coordenada vertical, as operações de atualização de movimento são:
+                    <br> Atualiza a Velocidade: velocidade = velocidade + gravidade;
+                    <br>Atualiza a Posição: posicaoY = posicaoY + velocidade;
+                </div>
+            </div>
 
 
 
