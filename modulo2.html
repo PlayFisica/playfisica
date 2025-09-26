@@ -246,6 +246,7 @@
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=U5pWI95cydM" target="_blank">Vídeo Aula</a>
+                    <a href="#ex8">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
                     <strong>Observação:</strong> No P5.js, o princípio do MRU é aplicado no código por meio da atualização contínua da posição do objeto, frame a frame, usando a fórmula simplificada posicao = posicao + velocidade;. A velocidade pode ser um valor positivo para movimento em um sentido ou um valor negativo para movimento no sentido oposto (como da direita para a esquerda). Para criar o efeito visual de movimento, a cada frame, o valor da posição é atualizado, o plano de fundo é redesenhado (apagando o objeto anterior) e a forma (círculo) é redesenhada na nova posição.
@@ -274,6 +275,7 @@
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=7hFHx1zRd4A" target="_blank">Vídeo Aula</a>
+                    <a href="#ex9">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
                     <strong>Observação:</strong>No P5.js, o MRUV é aplicado a cada "quadro" ou frame do programa. Para simular a mudança de velocidade e posição causada pela aceleração, duas etapas de atualização são necessárias: 
@@ -292,11 +294,90 @@
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=Hkta5bcReeE" target="_blank">Vídeo Aula</a>
+                    <a href="#ex10">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
                     <strong>Observação:</strong> Na aplicação em P5.js, a cada frame (quadro), o programa simula a Queda Livre calculando a nova velocidade do objeto usando a gravidade. Em seguida, ele usa essa nova velocidade para calcular a nova posição. Como a gravidade afeta a coordenada vertical, as operações de atualização de movimento são:
                     <br> Atualiza a Velocidade: velocidade = velocidade + gravidade;
                     <br>Atualiza a Posição: posicaoY = posicaoY + velocidade;
+                </div>
+            </div>
+
+
+
+            <div class="lesson">
+                <h2>7. Lançamento Vertical</h2>
+                <p class="lesson-summary"> No Lançamento Vertical, quando um objeto é lançado para cima, sua velocidade inicial é positiva, mas a gravidade age como uma aceleração negativa, diminuindo a velocidade a cada instante. Quando a velocidade do objeto chega a zero (V=0), ele para no ar. A gravidade inverte o jogo, desacelerando o corpo na subida e, em seguida, acelerando-o na descida. A fórmula da velocidade é V=V0​+g⋅t</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/17 - Lançamento Vertical.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=lg0845LBNxQ" target="_blank">Vídeo Aula</a>
+                    <a href="#ex11">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> No P5.js, o efeito de subida e descida é criado através da atualização sequencial de velocidade e posição a cada frame:
+                    <br> Atualiza a Velocidade (Subida): A gravidade é subtraída da velocidade (aceleração negativa): velocidade = velocidade - gravidade; <br> Atualiza a Posição: O valor da velocidade é subtraído da posição Y para que o objeto suba (pois no P5.js o eixo Y cresce para baixo): posicaoY = posicaoY - velocidade;
+                    <br>Quando a velocidade se torna negativa, o objeto começa a descer e a gravidade continua a ser subtraída da velocidade, mas como a posicaoY também está sendo subtraída por um valor de velocidade negativo, a posição Y aumenta, simulando a queda.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>8. Lançamento Horizontal</h2>
+                <p class="lesson-summary">Summary: O Lançamento Horizontal é a combinação de dois movimentos independentes:
+                    <br>Eixo X (Horizontal): O movimento é Uniforme porque a velocidade (Vx) é constante (não há aceleração horizontal agindo). A cada segundo, o objeto avança a mesma distância para o lado, seguindo a fórmula S=S0​+V⋅t.
+                    <br>Eixo Y (Vertical): O movimento é de Queda Livre porque a velocidade (Vy) muda, já que a gravidade acelera o objeto para baixo. A fórmula da velocidade é V=V0​+g⋅t.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/18 - Lançamento Horizontal.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=NcPOPo6e5vI" target="_blank">Vídeo Aula</a>
+                    <a href="#ex12">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> No P5.js, o Lançamento Horizontal é simulado atualizando-se as posições X e Y separadamente a cada frame:
+                    <br>Atualização Horizontal (MRU): A posição X é atualizada com a velocidade X, que não muda: posicaoX = posicaoX + velocidadeX;<br>Atualização Vertical (Queda Livre): A velocidade Y é sempre afetada pela gravidade, sendo atualizada antes de calcular a nova posição Y: 
+                    <br> - velocidadeY = velocidadeY + gravidade; 
+                    <br> - posicaoY = posicaoY + velocidadeY;
+                </div>
+            </div>
+
+
+
+            <div class="lesson">
+                <h2>9. Lançamento Oblíquo</h2>
+                <p class="lesson-summary">O Lançamento Oblíquo é a combinação de dois movimentos que já conhecemos: o Movimento Uniforme na horizontal e o Lançamento Vertical. A diferença é que o objeto é lançado com uma velocidade inicial (V0​) que tem uma inclinação, ou seja, um ângulo (θ).<br>Velocidade Horizontal (Vx): É constante durante todo o movimento. É calculada pela decomposição: Vx=V0​⋅cos(θ).
+                <br>Velocidade Vertical (Vy): Muda por causa da gravidade. É calculada pela decomposição: Vy=V0​⋅sin(θ).</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/19 - Lançamento Oblíquo.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=bSyuVhZHZ9w" target="_blank">Vídeo Aula</a>
+                    <a href="#ex13">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> No P5.js, o lançamento oblíquo exige o uso de trigonometria:
+                    <br>Cálculo Inicial (Setup): As velocidades iniciais Vx e Vy são calculadas na function setup usando as funções cos(), sin() e radians().
+                    <br>Atualização (Draw): Na function draw, o movimento horizontal é MRU e o vertical é Lançamento Vertical (ou Queda Livre):
+                    <br> - posicaoX = posicaoX + velocidadeX; (MRU Horizontal);
+                    <br> - velocidadeY = velocidadeY - gravidade; (MRUV Vertical);
+                    <br> - posicaoY = posicaoY - velocidadeY; (Atualização da Posição Vertical).
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>10. Estrutura Condicional If-Else</h2>
+                <p class="lesson-summary">A estrutura if-else (Se-Senão) é usada quando sua lógica de programação exige uma escolha binária (uma coisa ou outra).
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/20 - If else.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=t7nhtPJEKIs" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> É possível aninhar estruturas if-else para criar lógica com múltiplas condições (ex: if (sinal_é_verde) { Avança } else { if (sinal_é_amarelo) { Atenção } else { Para } }). No P5.js, o if-else é muito útil para mudar o estado visual da tela, como alterar a cor de fundo baseado em uma condição. Por exemplo, se a posição X for menor que a metade da largura, o fundo fica azul claro, senão, fica azul escuro.
                 </div>
             </div>
 
