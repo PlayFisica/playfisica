@@ -452,7 +452,7 @@ details[open] .arrow {
 .popup-conteudo {
 	position: relative;
 	background: #fff;
-	width: 685px;
+	width: 1000px;
 	height: 600px;
 	border-radius: 0;
 	overflow: hidden;
@@ -888,6 +888,9 @@ header.sticky {
 		padding: 0.8rem;
 	}
 
+	.popup-conteudo{
+		width: 685px;
+	}
 
 	
 }
