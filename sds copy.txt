@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PlayFísica</title>
+
+	<link rel="stylesheet" href="css/style2.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<!-- header section -->
+	<header>
+		<!-- <a href="#" class="logo">Food<span>Fun</span></a> -->
+		<a href="index.html" style="border: 0;" class="logo"><img src="img/logo.png" width="80%" alt="logo"></a>
+		<ul class="navbar">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#aulas">Aulas</a></li>
+			<li><a href="#material">Material</a></li>
+			<li><a href="#exercicios">Exercícios</a></li>
+
+		</ul>
+
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+	</header>
+
+	<!-- home section -->
+		<section class="home" id="home">
+			<div class="home-text">
+				<h1><span>Módulo 2:</span> Variáveis, IF, MRU, MRUV</h1>
+			</div>
+
+			<div class="home-img">
+				<img src="img/home.png"  alt="home">
+			</div>
+		</section>
+
+		<hr class="divisor">
+
+		<section class="videos" id="aulas">
+			<h1>Aulas</h1>
+			<br>
+			<br>
+			<div class="videos-text">
+				<div>
+					<a class="thumbnail" href="https://www.youtube.com/watch?v=t2r3iS5aPlU" target="_blank" rel="noopener noreferrer">
+						<img  class="thumbnail" src="https://img.youtube.com/vi/t2r3iS5aPlU/maxresdefault.jpg" alt="Video1">
+					</a>
+					<p>  20 | Módulo 2: Variável e Atribuição no P5.js (PlayFísica)  </p>
+				</div>
+				<div>
+					<a href="https://www.youtube.com/watch?v=KCLq8rIOuDA" target="_blank" rel="noopener noreferrer">
+						<img class="thumbnail" src="https://img.youtube.com/vi/KCLq8rIOuDA/maxresdefault.jpg" alt="Video2"">
+					</a>
+					<p>  21 | Módulo 2: Operações Matemáticas, Operações Comparativas e <br> o If no P5.js (PlayFísica)  </p>
+				</div>
+				<div>
+					<a  href="https://www.youtube.com/watch?v=U5pWI95cydM" target="_blank" rel="noopener noreferrer">
+						<img class="thumbnail" src="https://img.youtube.com/vi/U5pWI95cydM/maxresdefault.jpg" alt="Video3">
+					</a>
+					<p class="">  22 | Módulo 2: Movimento Retilíneo Uniforme no P5.js (PlayFísica)   </p>
+				</div>
+				<div>
+					<a href="https://www.youtube.com/watch?v=qh-2ebjl5cw" target="_blank" rel="noopener noreferrer">
+						<img class="thumbnail" src="https://img.youtube.com/vi/qh-2ebjl5cw/maxresdefault.jpg" alt="Video4">
+					</a>
+					<p>  23 | Módulo 2: Mais Aplicações do MRU no P5.js (PlayFísica)  </p>
+				</div>
+								<div>
+					<a href="https://www.youtube.com/watch?v=dhf-9c3J9BM" target="_blank" rel="noopener noreferrer">
+						<img class="thumbnail" src="https://img.youtube.com/vi/dhf-9c3J9BM/maxresdefault.jpg" alt="Video4">
+					</a>
+					<p>   24 | Módulo 2: Desenhando com Movimento usando Linguagem de Programação (Exercício 8 - PlayFísica)   </p>
+				</div>
+			</div>
+		</section>
+
+	<hr class="divisor">
+
+		<!-- home section -->
+		<section class="Material" id="material">
+			<div class="material-text">
+				<h1>Materiais de aulas</h1>
+
+
+				<h2>1. Variáveis</h2>
+
+				<div class="material-img">
+            		<img src="img/MateriaisDasAulas/11 -Variável e Atribuição.png"  alt="home">
+          		</div>
+				<h2>2.Operações com IF</h2>
+				<div class="material-img">
+            		<img src="img/MateriaisDasAulas/12 - Operações e If.png"  alt="home">
+          		</div>
+
+
+				<!--
+					<h2>3.MRU</h2>
+					<div class="material-img">
+						<img src="img/MateriaisDasAulas/13 - MRU.png"  alt="home">
+					  </div>
+			
+				-->
+          
+          
+					
+			</div>
+		</section>
+
+
+		<hr class="divisor">
+
+
+
+
+
+		<section class="exercicios" id="exercicios">
+		<div class="exercicios-text">
+			<h1>Exercícios</h1>
+
+			<!-- Exemplo de exercício
+			<div class="exercicio-item">
+			<h2>Exercício 7</h2>
+			<div class="exercicios-img">
+				<img src="img/MateriaisDasAulas/10.3 - Exercício 7.png" alt="Exercício 8">
+			</div>
+
+			<details>
+				<summary>
+				<span class="toggle-text">Mostrar resposta</span>
+				<span class="arrow">▶</span>
+				</summary>
+				<div class="resposta">
+					<div class="exercicios-img">
+						<img src="img/code1.png" alt="Exercício 8">
+					</div>
+				</div>
+			</details>
+			</div>
+			
+			
+
+
+			<div class="exercicio-item">
+			<h2>Exercício 8</h2>
+			<div class="exercicios-img">
+				<div id="animation1"></div>
+
+
+			<details>
+				<summary>
+				<span class="toggle-text">Mostrar resposta</span>
+				<span class="arrow">▶</span>
+				</summary>
+				<div class="resposta">
+					<div class="exercicios-img">
+						<img src="img/code.png" alt="Exercício 8">
+					</div>
+				</div>
+			</details>
+			</div>
+		-->
+
+
+			<div class="exercicio-item">
+			<h2>Exercício 9</h2>
+			<div class="exercicios-img">
+				<img  src="img/MateriaisDasAulas/exercicio9.png" alt="Exercício 9" ">
+				<button class="btn-animacao" onclick="abrirPopup()"><img src="img/play.png" alt="Play"></button>
+				<!-- Popup escondido -->
+				<div id="popup" class="popup">
+				<div class="popup-conteudo">
+					<span class="fechar" onclick="fecharPopup()">&times;</span>
+					<!-- Agora carrega a animação local -->
+					<iframe class="animation" src="animations/9/9.html" frameborder="0"></iframe>
+				</div>
+				</div>
+
+			<details>
+				<summary>
+				<span class="toggle-text">Mostrar resposta</span>
+				<span class="arrow">▶</span>
+				</summary>
+				<div class="resposta">
+					<div class="exercicios-img">
+						<img src="img/code9.png" alt="Exercício 8">
+					</div>
+				</div>
+			</details>
+			</div>
+		</div>
+		</section>
+
+		<div class="last-text">
+			<p>© Developed 2025 by Gustavo</p>
+		</div>
+
+
+	<!-- scroll top -->
+	<a href="#home" class="scroll-top">
+		<i class='bx bx-up-arrow-alt' ></i>
+	</a>
+
+	<!-- custom scrollreveal link -->
+
+	<script src="https://unpkg.com/scrollreveal"></script>
+	
+	<!-- custom js link -->
+	<script type="text/javascript" src="js/scriptModulos.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha a Versão do Módulo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background: #121212;
+            color: #eee;
+        }
+
+        .tela-escolha {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #1f1f1f, #121212);
+        }
+
+        .tela-escolha h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #f0f0f0;
+        }
+
+        .tela-escolha p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #bbb;
+        }
+
+        .opcoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .opcao {
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid transparent;
+        }
+
+        .opcao:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+            border-color: #ff9800;
+            background: #292929;
+        }
+
+        .opcao img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+        }
+
+        .opcao h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .opcao p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.4;
+        }
+
+        .icone {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 880px) {
+            .tela-escolha h1 {
+                font-size: 2rem;
+            }
+
+            .tela-escolha p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .opcao {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tela-escolha">
+        <h1>Escolha sua versão</h1>
+        <p>Selecione a versão do próximo módulo para continuar</p>
+
+        <div class="opcoes">
+            <!-- Versão Amplificada -->
+            <div class="opcao" onclick="selecionarModo('A')">
+                <div class="icone">💻📱</div>
+                <img src="img/amplificada_preview.png" alt="Prévia Versão Amplificada">
+                <h2>Versão Amplificada</h2>
+                <p>Ideal para notebook e celular, conteúdo ampliado com melhor visualização e interatividade.</p>
+            </div>
+
+            <!-- Versão Reduzida -->
+            <div class="opcao" onclick="selecionarModo('R')">
+                <div class="icone">💻</div>
+                <img src="img/reduzida_preview.png" alt="Prévia Versão Reduzida">
+                <h2>Versão Reduzida</h2>
+                <p>Mais compacta, indicada para notebooks, mantém o foco no essencial do conteúdo.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const modulo = params.get('modulo') || 1;
+
+        function selecionarModo(modo) {
+            localStorage.setItem('modoTela', modo);
+            window.location.href = `modulo${modulo}${modo}.html`;
+        }
+    </script>
+
+</body>
+
+</html>

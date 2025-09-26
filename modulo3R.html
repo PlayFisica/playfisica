@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayFísica</title>
+
+    <link rel="stylesheet" href="css/style3.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <!-- <a href="#" class="logo">Food<span>Fun</span></a> -->
+        <a href="index.html" style="border: 0;" class="logo"><img src="img/logo.png" width="80%" alt="logo"></a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#material">Material</a></li>
+            <li><a href="#exercicios">Exercícios</a></li>
+
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+    </header>
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1><span>Módulo 3:</span> Leis de Newton</h1>
+        </div>
+
+        <div class="home-img">
+            <img src="img/home.png" alt="home">
+        </div>
+    </section>
+
+    <hr class="divisor">
+
+
+
+
+    <!------------------------------VIDEOS------------------------------>
+
+    <section class="videos" id="aulas">
+        <h1>Aulas</h1>
+        <br><br>
+        <div class="videos-text">
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/GT5JRtmZQ_U" allowfullscreen></iframe>
+                </div>
+                <p> 37 | Módulo 3: 1º Lei de Newton no P5.js (PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/UNPPgKmpFnA" allowfullscreen></iframe>
+                </div>
+                <p> 38 | Módulo 3: Desenhando com Movimento usando o P5.js (Exercício 14 - PlayFísica) </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/tIfvN0NnYMg" allowfullscreen></iframe>
+                </div>
+                <p>  39 | Módulo 3: 2º Lei de Newton no P5.js (PlayFísica)  </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <hr class="divisor">
+
+
+    <!------------------------------MATERIAIS------------------------------>
+
+    <section class="materials" id="material">
+        <div class="materials-container">
+            <h1>Material das Aulas</h1>
+
+            <div class="lesson">
+                <h2>1. Primeira Lei de Newton e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Primeira Lei de Newton, ou Lei da Inércia, estabelece que um objeto permanece em seu estado de repouso ou movimento retilíneo uniforme, a menos que uma força resultante atue sobre ele. A imagem ilustra esse conceito, mostrando que se a força resultante é zero, a velocidade do objeto não muda. Para aplicar essa lei em P5.js, é necessário entender operações matemáticas e comparativas, e a estrutura de controle if.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/21 - 1_Lei_newton.png" alt="Primeira Lei de Newton (Lei da Inércia) e sua aplicação em P5.js">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=GT5JRtmZQ_U" target="_blank">Vídeo Aula</a>
+                    <a href="#ex14">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Note como a Primeira Lei de Newton, ou Lei da Inércia, é fundamental para entender o movimento dos objetos. Se a força resultante sobre um objeto for zero (Fr = 0), ele manterá seu estado atual: um objeto em repouso permanecerá em repouso, e um objeto em movimento continuará em movimento com velocidade e direção constantes. A única forma de alterar esse estado é aplicando uma força. Em P5.js, isso se traduz em posicaox = posicaox + velocidade; e posicaoy = posicaoy + velocidade, onde a velocidade constante (ou zero) resulta em um Movimento Retilíneo Uniforme (MRU) ou ausência de movimento.
+                </div>
+            </div>
+
+
+ 
+            <div class="lesson">
+                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um Movimento Retilíneo Uniformemente Variado (MRUV).</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <hr class="divisor">
+
+
+
+
+
+    <section class="exercicios" id="exercicios">
+        <div class="exercicios-text">
+            <h1>Exercícios</h1>
+
+
+            <div class="exercicio-item" id="ex14">
+                <h2>Exercício 14</h2>
+                <div class="exercicios-img">
+                    <img src="animations/14/14.png" alt="Exercício 9" ">
+				<button class=" btn-animacao" onclick="abrirPopup()"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup()">&times;</span>
+                            <iframe class="animation" src="animations/14/14.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/14/code14.png" alt="Exercício 8">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+    </section>
+
+    <div class="last-text">
+        <p>© Developed 2025 by Gustavo</p>
+    </div>
+
+
+    <!-- scroll top -->
+    <a href="#home" class="scroll-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!-- custom scrollreveal link -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- custom js link -->
+    <script type="text/javascript" src="js/scriptModulos.js"></script>
+
+</body>
+
+</html>
