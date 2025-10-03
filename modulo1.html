@@ -1,134 +1,480 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Em construção — PlayFísica - Módulo 1</title>
-  <style>
-    :root{
-      --bg: #0f1724;
-      --card: #0b1220;
-      --accent: #ffb020;
-      --muted: #9aa4b2;
-      --glass: rgba(255,255,255,0.03);
-      --radius: 14px;
-      font-family: 'Raleway', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayFísica</title>
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      display:grid;
-      place-items:center;
-      background: linear-gradient(180deg,#071127 0%, #0f1724 100%);
-      color: #e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:24px;
-    }
+    <link rel="stylesheet" href="css/styleMA.css">
 
-    .card{
-      width:min(880px,96%);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      padding:36px;
-      display:flex;
-      gap:28px;
-      align-items:center;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.03);
-    }
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    .emoji{
-      flex:0 0 160px;
-      height:160px;
-      border-radius:12px;
-      display:grid;
-      place-items:center;
-      background: linear-gradient(135deg, rgba(255,176,32,0.12), rgba(255,176,32,0.06));
-      font-size:68px;
-      color:var(--accent);
-      box-shadow: 0 8px 30px rgba(255,176,32,0.06);
-    }
-
-    .content{
-      flex:1 1 auto;
-    }
-
-    h1{
-      font-size:clamp(24px,4vw,42px);
-      margin-bottom:8px;
-      color:#fff;
-      letter-spacing: -0.6px;
-    }
-
-    p.lead{
-      color:var(--muted);
-      margin-bottom:18px;
-      font-size:clamp(14px,1.4vw,16px);
-    }
-
-    .bar{
-      height:12px;
-      background: linear-gradient(90deg, rgba(255,176,32,0.18), rgba(255,176,32,0.07));
-      border-radius:999px;
-      overflow:hidden;
-      position:relative;
-    }
-    .bar::after{
-      content:"";
-      position:absolute;
-      left:-40%;
-      top:0;bottom:0;
-      width:40%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
-      animation: shine 2.2s linear infinite;
-    }
-
-    @keyframes shine{
-      from{left:-40%}
-      to{left:140%}
-    }
-
-    .meta{
-      display:flex;
-      gap:12px;
-      margin-top:16px;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .btn{
-      margin-left:auto;
-      background:transparent;
-      border:1px solid rgba(255,255,255,0.06);
-      padding:8px 14px;
-      border-radius:10px;
-      color:var(--muted);
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    @media (max-width:720px){
-      .card{flex-direction:column;align-items:stretch;padding:22px}
-      .emoji{width:100%;height:84px;border-radius:10px;font-size:44px}
-      .btn{margin:12px 0 0 auto}
-    }
-  </style>
 </head>
-<body>
-  <main class="card" role="main" aria-labelledby="titulo">
-    <div class="emoji" aria-hidden="true">🏗️</div>
-    <div class="content">
-      <h1 id="titulo">Em construção</h1>
-      <p class="lead">Esta página será construída em breve. Volte mais tarde para conferir os conteúdos do PlayFísica.</p>
 
-      <div class="bar" aria-hidden="true" style="margin-bottom:6px"></div>
-      <div class="meta">
-        <div>status: <strong>em desenvolvimento</strong></div>
-        <a class="btn" href="index.html">Voltar ao início</a>
-      </div>
+<body>
+    <!-- header section -->
+    <header>
+        <!-- <a href="#" class="logo">Food<span>Fun</span></a> -->
+        <a href="index.html" style="border: 0;" class="logo"><img src="img/logo.png" width="80%" alt="logo"></a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#material">Material</a></li>
+            <li><a href="#exercicios">Exercícios</a></li>
+
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+    </header>
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1 style="font-size: 3.5rem;"><span>Módulo 1:</span> P5.js, setup( ). draw( ), createCanvas( ), background( ), circle( ), ellipse( ), fill( ), nofill(), stroke( ) ...  </h1>
+        </div>
+
+        <div class="home-img">
+            <img src="img/home.png" alt="home">
+        </div>
+    </section>
+
+    <hr class="divisor">
+
+
+
+
+    <!------------------------------VIDEOS------------------------------>
+
+    <section class="videos" id="aulas">
+        <h1>Aulas</h1>
+        <br><br>
+        <div class="videos-text">
+
+            <div>
+                <div class="video-container" id="v3">
+                    <iframe src="https://www.youtube.com/embed/3Ld0IT9ii-4" allowfullscreen></iframe>
+                </div>
+                <p>  03 | Módulo 1: O que é o P5.js? (PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v4">
+                    <iframe src="https://www.youtube.com/embed/brYO770Ccv4" allowfullscreen></iframe>
+                </div>
+                <p>  04 | Módulo 1: Functions Setup e Draw do P5.js (PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v5">
+                    <iframe src="https://www.youtube.com/embed/68PfSUKZ62U" allowfullscreen></iframe>
+                </div>
+                <p>  05 | Módulo 1: Comandos CreateCanvas e Background do P5.js (PlayFísica)  </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/kMvgZRXhzw8" allowfullscreen></iframe>
+                </div>
+                <p>  06 | Módulo 1: Comandos Circle e Ellipse do P5.js (PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/mtgUuAMzBfY" allowfullscreen></iframe>
+                </div>
+                <p>  07 | Módulo 1: Desenhando usando linguagem de programação (Exercício 1 - PlayFísica) 
+                </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/f5yU6toX_ds" allowfullscreen></iframe>
+                </div>
+                <p>  08 | Módulo 1: Comandos Fill e Stroke do P5.js (PlayFísica)  </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/W8FoSm7rdO4" allowfullscreen></iframe>
+                </div>
+                <p>   09 | Módulo 1: Desenhando usando linguagem de programação (Exercício 2 - PlayFísica)   </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/4bC1ywtaABs" allowfullscreen></iframe>
+                </div>
+                <p>  10 | Módulo 1: Comandos strokeWeight, noFill e noStroke do P5.js (PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/yi5ivR4iQDI" allowfullscreen></iframe>
+                </div>
+                <p>  11 | Módulo 1: Desenhando usando linguagem de programação (Exercício 3 - PlayFísica)  </p>
+            </div>
+
+
+
+            <div>
+                <div class="video-container" id="v37">
+                    <iframe src="https://www.youtube.com/embed/kyE3rNk0Htk" allowfullscreen></iframe>
+                </div>
+                <p>  12 | Módulo 1: Comandos Line e Point do P5.js (PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v38">
+                    <iframe src="https://www.youtube.com/embed/YtvHAqq4ywo" allowfullscreen></iframe>
+                </div>
+                <p>  13 | Módulo 1: Comandos Quad e Triangle do P5.js (PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/imcOIwE-qXY" allowfullscreen></iframe>
+                </div>
+                <p>  14 | Módulo 1: Desenhando usando linguagem de Programação (Exercício 4 - PlayFísica)  </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/sEcHzCbO780" allowfullscreen></iframe>
+                </div>
+                <p>  15 | Módulo 1: Desenhando usando Linguagem de Programação (Exercicio 5 - PlayFísica)  </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/AeGPr2a2hSE" allowfullscreen></iframe>
+                </div>
+                <p>  16 | Módulo 1: Comandos Rect e Square do P5.js (PlayFísica)  </p>
+            </div>
+
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/c-eUGQ3HmYA" allowfullscreen></iframe>
+                </div>
+                <p>  17 | Módulo 1: Comando Arc do P5.js (PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/Xhrm262OkQg" allowfullscreen></iframe>
+                </div>
+                <p>  18 | Módulo 1: Desenhando usando Linguagem de Programação (Exercício 6 - PlayFísica)  </p>
+            </div>
+
+            <div>
+                <div class="video-container" id="v39">
+                    <iframe src="https://www.youtube.com/embed/zdf_XM6SZbM" allowfullscreen></iframe>
+                </div>
+                <p>  19 | Módulo 1: Desenhando usando Linguagem de Programação (Exercício 7 - PlayFísica)  </p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <hr class="divisor">
+
+
+    <!------------------------------MATERIAIS------------------------------>
+
+    <section class="materials" id="material">
+        <div class="materials-container">
+            <h1>Material das Aulas</h1>
+
+            <div class="lesson">
+                <h2>1. O que é o P5.js?</h2>
+                <p class="lesson-summary">O p5.js é uma biblioteca (um conjunto de comandos) criada utilizando a linguagem JavaScript (Linguagem de Programação). Foi desenvolvido por Lauren McCarthy com o objetivo de tornar a programação mais acessível e visual, sendo ideal para artistas, designers, educadores e qualquer pessoa interessada em expressar criatividade através do código. Você pode escrever e executar códigos de p5.js em um site gratuito, online e de fácil utilização.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/1 - O que é o P5.js.png" >
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=3Ld0IT9ii-4" target="_blank">Vídeo Aula</a>
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>2. Functions Setup e Draw</h2>
+                <p class="lesson-summary">O código em p5.js é organizado em duas funções principais que controlam a estrutura e o ciclo de vida de qualquer programa:
+                    <br>function setup(): É uma parte do código que possui comandos de configuração (como a criação do ambiente, a definição de cores e a inicialização de variáveis). É executada apenas uma vez no início do processamento do código.
+                    <br>function draw(): É a parte do código que possui comandos de desenho (como a atualização de posições, personagens e movimentos). É executada repetidamente no processamento do código.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/2 - Functions Setup e Draw.png" >
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=brYO770Ccv4" target="_blank">Vídeo Aula</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> 
+                    <br>Tanto setup() quanto draw() devem ter a palavra "function", o nome da função, os parênteses () e as chaves {}.
+                    <br>As letras devem ser todas minúsculas e iguais ao título, caso contrário dará um erro (erro de sintaxe).
+                    <br>A função draw() é executada em um ciclo de repetição chamado FPS (Frames por Segundo). O padrão é 60 FPS (60 quadros por segundo), mas pode ser alterado.
+                    <br>É possível criar outras funções com o nome que você quiser, mas as funções setup() e draw() são definidas pela biblioteca p5.js e não podem ser alteradas no nome.
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+    <hr class="divisor">
+
+
+
+
+
+    <section class="exercicios" id="exercicios">
+        <div class="exercicios-text">
+            <h1>Exercícios</h1>
+
+
+            <div class="exercicio-item" id="ex1">
+                <h2>Exercício 1</h2>
+                <div class="exercicios-img">
+                    <img src="animations/1/1.png" alt="Exercício 1" ">
+				<button class=" btn-animacao" onclick="abrirPopup(1)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup1" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(1)">&times;</span>
+                            <iframe class="animation" src="animations/1/1.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/1/code1.png" alt="Exercício 1">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+            <div class="exercicio-item" id="ex2">
+                <h2>Exercício 2</h2>
+                <div class="exercicios-img">
+                    <img src="animations/2/2.png" alt="Exercício 2" ">
+				<button class=" btn-animacao" onclick="abrirPopup(2)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup2" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(2)">&times;</span>
+                            <iframe class="animation" src="animations/2/2.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/2/code2.png" alt="Exercício 2">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="exercicio-item" id="ex3">
+                <h2>Exercício 3</h2>
+                <div class="exercicios-img">
+                    <img src="animations/3/3.png" alt="Exercício 3" ">
+				<button class=" btn-animacao" onclick="abrirPopup(3)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup3" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(3)">&times;</span>
+                            <iframe class="animation" src="animations/3/3.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/3/code3.png" alt="Exercício 3">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+   
+
+            <div class="exercicio-item" id="ex4">
+                <h2>Exercício 4</h2>
+                <div class="exercicios-img">
+                    <img src="animations/4/4.png" alt="Exercício 4" ">
+				<button class=" btn-animacao" onclick="abrirPopup(4)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup4" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(4)">&times;</span>
+                            <iframe class="animation" src="animations/4/4.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/4/code4.png" alt="Exercício 4">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+            <div class="exercicio-item" id="ex5">
+                <h2>Exercício 5</h2>
+                <div class="exercicios-img">
+                    <img src="animations/5/5.png" alt="Exercício 5" ">
+				<button class=" btn-animacao" onclick="abrirPopup(5)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup5" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(5)">&times;</span>
+                            <iframe class="animation" src="animations/5/5.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/5/code5.png" alt="Exercício 5">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+            <div class="exercicio-item" id="ex6">
+                <h2>Exercício 6</h2>
+                <div class="exercicios-img">
+                    <img src="animations/6/6.png" alt="Exercício 6" ">
+				<button class=" btn-animacao" onclick="abrirPopup(6)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup6" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(6)">&times;</span>
+                            <iframe class="animation" src="animations/6/6.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/6/code6.png" alt="Exercício 6">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
+            <div class="exercicio-item" id="ex7">
+                <h2>Exercício 7</h2>
+                <div class="exercicios-img">
+                    <img src="animations/7/7.png" alt="Exercício 7" ">
+				<button class=" btn-animacao" onclick="abrirPopup(7)"><img src="img/play.png" alt="Play"></button>
+                    <!-- Popup escondido -->
+                    <div id="popup7" class="popup">
+                        <div class="popup-conteudo">
+                            <span class="fechar" onclick="fecharPopup(7)">&times;</span>
+                            <iframe class="animation" src="animations/7/7.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/7/code7.png" alt="Exercício 7">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+   
+    </section>
+
+    <div class="last-text">
+        <p>© Developed 2025 by Gustavo</p>
     </div>
-  </main>
+
+
+    <!-- scroll top -->
+    <a href="#home" class="scroll-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!-- custom scrollreveal link -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- custom js link -->
+    <script type="text/javascript" src="js/scriptModulos.js"></script>
+
 </body>
+
 </html>
