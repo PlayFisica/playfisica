@@ -37,7 +37,7 @@
     <!-- home section -->
     <section class="home" id="home">
         <div class="home-text">
-            <h1 style="font-size: 3.5rem;"><span>Módulo 1:</span> P5.js, setup( ). draw( ), createCanvas( ), background( ), circle( ), ellipse( ), fill( ), nofill(), stroke( ) ...  </h1>
+            <h1 style="font-size: 3.5rem;"><span>Módulo 1:</span> P5.js, setup( ), draw( ), createCanvas( ), background( ), circle( ), ellipse( ), fill( ), nofill(), stroke( ) ...  </h1>
         </div>
 
         <div class="home-img">
@@ -207,6 +207,7 @@
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=3Ld0IT9ii-4" target="_blank">Vídeo Aula</a>
+                    <a href="#ex1">Exercício Complementar</a>
                 </div>
             </div>
 
@@ -221,6 +222,7 @@
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=brYO770Ccv4" target="_blank">Vídeo Aula</a>
+                    <a href="#ex1">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
                     <strong>Observação:</strong> 
@@ -232,6 +234,132 @@
             </div>
 
 
+            <div class="lesson">
+                <h2>3. CreateCanvas e Background</h2>
+                <p class="lesson-summary">Dois comandos essenciais configuram o ambiente em p5.js: Primeiro, o comando createCanvas(largura, altura) é usado para criar a tela de pintura (o palco) para o seu projeto. Ele requer dois parâmetros numéricos em pixels (largura e altura) e é executado uma única vez dentro de function setup(). Segundo, o comando background(cor) pinta todo o fundo da tela com a cor definida. Ele aceita de um a quatro parâmetros, com valores de 0 a 255, representando as cores RGB (Vermelho, Verde, Azul) e, opcionalmente, o alfa (transparência). Este comando é geralmente usado dentro de function draw() para repintar e "limpar" o cenário a cada quadro.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/3 - CreateCanvas e Background.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/68PfSUKZ62U?si=1DpetWltVz7YJC-Q" target="_blank">Vídeo Aula</a>
+                    <a href="#ex1">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>O comando createCanvas() no setup() prepara o palco para a simulação. Já o uso de background() no draw() é crucial para atualizar o fundo constantemente, o que evita que objetos em movimento deixem rastros (o "efeito fantasma") na tela. Lembre-se que os pixels são as menores unidades de cor que formam a imagem digital.
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h2>4. Circle e Ellipse</h2>
+                <p class="lesson-summary">Para desenhar formas circulares na tela, o p5.js utiliza comandos que dependem do sistema de Coordenadas no Computador, onde o ponto (0, 0) se encontra no canto superior esquerdo da tela. Os comandos são: Primeiro, o comando circle(x, y, d) é usado para desenhar um círculo perfeito. Ele possui três parâmetros: 1∘ e 2∘ definem a coordenada (x e y) do centro do círculo, e o 3∘ (d) define o diâmetro. Segundo, o comando ellipse(x, y, largura, altura) é usado para desenhar uma elipse ou um círculo. Ele possui quatro parâmetros: 1∘ e 2∘ definem o centro (x e y), o 3∘ define a largura e o 4∘ define a altura.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/4 - Circle e Ellipse.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/kMvgZRXhzw8?si=775Hqpo06dntQDB2" target="_blank">Vídeo Aula</a>
+                    <a href="#ex1">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>O sistema de Coordenadas no Computador é diferente do Cartesiano, pois o eixo Y cresce para baixo (o (0, 0) é o canto superior esquerdo). Para que as formas circulares sejam exibidas e atualizadas a cada quadro, os comandos circle() ou ellipse() devem ser colocados dentro da função function draw().
+                </div>
+            </div>
+
+              <div class="lesson">
+                <h2>5. Fill e Stroke</h2>
+                <p class="lesson-summary">Os comandos fill() e stroke() são essenciais para controlar a aparência das formas desenhadas na tela. O comando fill(cor) é usado para preencher as formas com cores, enquanto o comando stroke(cor) é usado para definir a cor do contorno (traço) das formas. Ambos os comandos funcionam de maneira idêntica: aceitam valores numéricos de 0 a 255 para cada parâmetro, podendo receber um parâmetro (tons de cinza), ou três/quatro parâmetros para definir as cores RGB (Vermelho, Verde, Azul) e, opcionalmente, o alfa (transparência).</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/5 - Fill e Stroke.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/f5yU6toX_ds?si=EXy_EATYmNxySbsR" target="_blank">Vídeo Aula</a>
+                    <a href="#ex2">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>Tanto fill() quanto stroke() devem ser definidos antes do comando de desenho da forma (circle(), ellipse(), etc.) dentro do function draw(). A cor definida por esses comandos é aplicada a todas as formas posteriores até que o comando seja redefinido com novos valores. Eles são cruciais para a composição visual e o design das peças no seu código.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>6. StrokeWeight, noFill e noStroke</h2>
+                <p class="lesson-summary">Existem três comandos simples para personalizar a aparência das formas, controlando a espessura do traço ou desativando o preenchimento/contorno: strokeWeight(espessura): Define a espessura (largura) do contorno das formas, usando um parâmetro numérico em pixels. noFill(): Desativa o preenchimento da forma, deixando seu interior transparente. Não possui parâmetros. noStroke(): Desativa o contorno da forma, fazendo com que ela seja exibida apenas com o preenchimento. Não possui parâmetros.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/6 - StrokeWeight,noFill e noStroke.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/4bC1ywtaABs?si=lAS1Q6AhAZDDVMzN" target="_blank">Vídeo Aula</a>
+                    <a href="#ex3">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>Assim como os comandos fill() e stroke(), esses comandos afetam todas as formas desenhadas a seguir no seu código. Por exemplo, se você chamar noFill(), todas as formas subsequentes não terão preenchimento. Para que uma nova forma volte a ter preenchimento, você deve reativá-lo chamando o comando fill(cor) novamente antes de desenhar essa nova forma.
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h2>7. Line e Point</h2>
+                <p class="lesson-summary">Os comandos line() e point() são utilizados para desenhar os elementos mais básicos em p5.js. O comando line(x1, y1, x2, y2) é usado para desenhar uma linha reta e requer quatro parâmetros: os dois primeiros definem a coordenada (x e y) do primeiro ponto e os dois últimos definem a coordenada (x e y) do segundo ponto. Já o comando point(x, y) é usado para desenhar um único ponto e requer dois parâmetros para definir sua coordenada (x e y) na tela.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/7 - Line e Point.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/kyE3rNk0Htk?si=ZVfeh6-Sm9Dx48Qs" target="_blank">Vídeo Aula</a>
+                    <a href="#ex4">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>Diferentemente das formas preenchíveis (circle(), ellipse()), os comandos line() e point() não utilizam fill(). Suas cores e espessuras são controladas exclusivamente pelo comando stroke() (para a cor) e strokeWeight() (para a espessura), que devem ser definidos antes de line() ou point() dentro do function draw().
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h2>8. Quad e Triangle</h2>
+                <p class="lesson-summary">Os comandos quad() e triangle() são usados para desenhar polígonos simples na tela através da conexão de vértices definidos por coordenadas. O comando triangle(x1, y1, x2, y2, x3, y3) desenha um triângulo e requer seis parâmetros, que definem as coordenadas (x e y) de cada um dos três vértices. Já o comando quad(x1, y1, x2, y2, x3, y3, x4, y4) desenha um quadrilátero e requer oito parâmetros, que definem as coordenadas (x e y) de cada um dos seus quatro vértices.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/8 - Quad e Triangle.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/YtvHAqq4ywo?si=c5J58A_avhTGDsP8" target="_blank">Vídeo Aula</a>
+                    <a href="#ex4">Exercício Complementar 1</a>
+                    <a href="#ex5">Exercício Complementar 2</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>O preenchimento e o contorno dessas figuras são controlados, respectivamente, pelos comandos fill() e stroke() (cor e espessura), que devem ser chamados antes de quad() ou triangle() dentro da função draw(). A ordem em que você lista as coordenadas (x e y) dos vértices é crucial, pois ela determina o formato e a orientação final do polígono na tela.
+                </div>
+            </div>
+
+            
+            <div class="lesson">
+                <h2>9. Rect e Square</h2>
+                <p class="lesson-summary">Os comandos rect() e square() são utilizados para desenhar retângulos e quadrados na tela, formas com quatro lados e ângulos retos. Primeiro, o comando rect(x, y, largura, altura, [raio_canto]) desenha um retângulo e requer quatro parâmetros obrigatórios: o (x e y) do canto superior esquerdo, a largura e a altura. Ele também aceita parâmetros opcionais para arredondar os cantos. Segundo, o comando square(x, y, lado) desenha um quadrado perfeito e requer três parâmetros obrigatórios: o (x e y) do canto superior esquerdo e o tamanho do lado.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/9 - rect e square.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/AeGPr2a2hSE?si=n1uYNL2K1xubeG-s" target="_blank">Vídeo Aula</a>
+                    <a href="#ex6">Exercício Complementar 1</a>
+                    <a href="#ex7">Exercício Complementar 2</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>É importante lembrar que, por padrão, tanto rect() quanto square() utilizam a coordenada (x, y) do canto superior esquerdo como ponto de partida para o desenho, diferentemente de circle() e ellipse() que usam o centro. O preenchimento da forma é controlado por fill() e o contorno, pela cor e espessura definidas em stroke() e strokeWeight().
+                </div>
+            </div>
+
+
+
+
+            <div class="lesson">
+                <h2>10. Arc</h2>
+                <p class="lesson-summary">O comando arc() é utilizado para desenhar uma parte da circunferência (arco) de uma elipse ou círculo na tela, sendo o comando com mais parâmetros. Ele exige sete parâmetros: os dois primeiros definem a coordenada (x e y) do centro do arco; o 3∘ e 4∘ definem a largura e a altura da elipse de referência; o 5∘ e 6∘ definem o ângulo de início e de término do arco em radianos; e o 7∘ define o modo de desenho (CHORD, PIE ou OPEN).</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/10 - Arc.png">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://youtu.be/c-eUGQ3HmYA?si=QYFFZyxjbpMAO8jq" target="_blank">Vídeo Aula</a>
+                    <a href="#ex6">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong>O ponto mais crucial ao usar arc() é que os ângulos de início e fim devem ser especificados em radianos, e não em graus. O p5.js possui constantes como PI e HALF_PI para ajudar. O sétimo parâmetro de modo é o que determina se o arco deve ser fechado como uma fatia de pizza (PIE), fechado por uma linha reta (CHORD), ou permanecer aberto (OPEN). O comando deve ser colocado dentro de function draw() para ser desenhado na tela.
+                </div>
+            </div>
 
 
 

@@ -248,6 +248,72 @@ span{
 }
 
 
+
+
+
+
+/*---------------------------VIDEOS YOUTUBE---------------------------*/
+
+.videos {
+	margin: 0;
+	padding: 3rem 1rem;
+}
+
+.videos h1 {
+	margin: 0;
+	padding: 0;
+	font-size: var(--big-font);
+	line-height: 1.2;
+	color: var(--text-color);
+	text-align: center;
+}
+
+.videos-text {
+	border: 0;
+	padding: 0;
+	font-size: var(--p-font);
+	font-weight: 500;
+	color: var(--second-color);
+	line-height: 32px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+
+.videos-text p {
+	font-weight: bold;
+	color: var(--text-color);
+	text-align: center;
+}
+
+.video-container {
+	position: relative;
+	width: 90%;
+	padding-bottom: 50.625%;
+	/* proporção 16:9 */
+	height: 0;
+	overflow: hidden;
+	border-radius: 10px;
+	/* opcional */
+	margin: 0 auto;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+
+
+
+
+
+
 /*---------------------------DIVISOR---------------------------*/
 
 .divisor {
@@ -642,6 +708,9 @@ header.sticky{
 		height: auto;
 		width: 100%;
 	}
+	.videos-text {
+		grid-template-columns: 1fr;
+	}
 }
 
 
@@ -673,4 +742,3 @@ header.sticky{
   background-color: #050505;
   border-radius: 50%;
 }
-
