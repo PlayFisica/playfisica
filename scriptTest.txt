@@ -27,3 +27,29 @@ aulas.forEach(aula => {
         resumo.classList.add('ativo');
     });
 });
+
+
+
+
+
+
+ {
+            video: "https://www.youtube.com/embed/GT5JRtmZQ_U",
+            resumo: "img/MateriaisDasAulas/21 - 1_Lei_newton.png",
+            exercicioImg: "animations/14/14.png",
+            exercicioLink: "animations/14/14.html",
+            resposta: "animations/6/code6.png"
+        },
+        {
+            video: "https://www.youtube.com/embed/GT5JRtmZQ_U",
+            exercicioImg: "animations/15/15.png",
+            exercicioLink: "animations/15/15.html",
+            resposta: "animations/7/code7.png"
+        },
+        {
+            video: "https://www.youtube.com/embed/tIfvN0NnYMg",
+            resumo: "img/MateriaisDasAulas/22 - 2_Lei_Newton.png",
+            exercicioImg: "animations/16/16.png",
+            exercicioLink: "animations/16/16.html",
+            resposta: "animations/8/code8.png"
+        }

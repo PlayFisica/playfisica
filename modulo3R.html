@@ -1,111 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayFísica</title>
-
-    <link rel="stylesheet" href="css/styleMR.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayFísica</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<style>
+*{padding:0;margin:0;box-sizing:border-box;font-family:'Raleway',sans-serif;}
+body{background:#f7f7f7;color:#111;}
+.tela{width:100vw;height:100vh;display:flex;}
+.barra-lateral{width:25%;height:100%;background:#1e1e1e;display:flex;flex-direction:column;align-items:center;padding:1rem;overflow-y:auto;}
+.barra-lateral h2{color:#ff9100;margin-bottom:1rem;}
+.aula{background:#333;padding:.8rem;width:100%;text-align:center;margin-bottom:.7rem;border-radius:8px;cursor:pointer;transition:background .3s;color:#fff;}
+.aula:hover{background:#ff9100;}
+.principal{width:75%;height:100%;display:flex;flex-direction:column;background:#f7f7f7;color:#111;}
+.video{flex:1;display:flex;justify-content:center;align-items:center;overflow:hidden;padding:1rem 0;background:#000;}
+.video-container{width:60%;max-width:900px;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.4);}
+.video-container iframe{width:100%;height:100%;border:none;display:block;}
+.aba-inferior{height:50%;background:#fff8e1;display:flex;flex-direction:column;}
+.botoes{display:flex;justify-content:center;background:#ff9100;gap:1rem;padding:.5rem 0;}
+.aba-btn{background:transparent;border:none;color:white;font-size:1rem;cursor:pointer;font-weight:600;padding:.5rem 1rem;border-radius:5px;transition:.3s;}
+.aba-btn:hover,.aba-btn.ativo{background:white;color:#ff9100;}
+.conteudos{flex:1;padding:1rem 2rem;overflow-y:auto;}
+.conteudo{display:none;}
+.conteudo.ativo{display:block;}
+.exercicio-item{margin-bottom:2rem;padding:1rem;border:2px solid #ddd;border-radius:12px;background:#f9f9f9;align-items:center;box-shadow:0 8px 20px rgba(0,0,0,.1);transition:transform .3s,box-shadow .3s;}
+.exercicio-item:hover{transform:translateY(-5px);box-shadow:0 12px 25px rgba(0,0,0,.15);}
+.exercicio-item h2{font-size:2rem;margin-bottom:1rem;color:#302e29;text-align:left;}
+.exercicios-img{text-align:center;position:relative;display:inline-block;}
+.exercicios-img img{height:auto;width:50%;}
+.btn-animacao{position:absolute;left:10px;top:30%;transform:translateY(-50%);width:100px;height:100px;border-radius:50%;background:#f0f0f0;border:none;font-weight:bold;cursor:pointer;display:flex;justify-content:center;align-items:center;box-shadow:0 4px 8px rgba(0,0,0,.2);transition:background .3s,transform .2s;}
+.btn-animacao:hover{background:#e0e0e0;transform:translateY(-50%) scale(1.1);}
+</style>
 </head>
 
 <body>
+<div class="tela">
+    <div class="barra-lateral">
+        <h2>Aulas</h2>
+        <div class="aula">Aula 1</div>
+        <div class="aula">Aula 2</div>
+        <div class="aula">Aula 3</div>
+    </div>
 
-
-
-    <div class="tela">
-        <!-- BARRA LATERAL -->
-        <div class="barra-lateral">
-            <h2>Aulas</h2>
-            <div class="aula">Aula 1</div>
-            <div class="aula">Aula 2</div>
-            <div class="aula">Aula 3</div>
+    <div class="principal">
+        <div class="video">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/c-eUGQ3HmYA" title="YouTube" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
 
-        <!-- CONTEÚDO PRINCIPAL -->
-        <div class="principal">
-            <!-- VÍDEO -->
-            <div class="video">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/c-eUGQ3HmYA"
-                        title="YouTube" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
+        <div class="aba-inferior">
+            <div class="botoes">
+                <button class="aba-btn ativo" data-alvo="resumo">Resumo</button>
+                <button class="aba-btn" data-alvo="exercicio">Exercícios</button>
+                <button class="aba-btn" data-alvo="resposta">Resposta</button>
             </div>
 
-            <!-- ABA INFERIOR -->
-            <div class="aba-inferior">
-                <div class="botoes">
-                    <button class="aba-btn ativo" data-alvo="resumo">Resumo</button>
-                    <button class="aba-btn" data-alvo="exercicio">Exercícios</button>
-                    <button class="aba-btn" data-alvo="resposta">Resposta</button>
+            <div class="conteudos">
+                <div id="resumo" class="conteudo ativo">
+                    <a href="img/MateriaisDasAulas/10 - Arc.png" target="_blank">
+                        <img src="img/MateriaisDasAulas/10 - Arc.png" alt="Resumo">
+                    </a>
                 </div>
 
-                <div class="conteudos">
-                    <div id="resumo" class="conteudo ativo">
-                        <h2>Resumo</h2>
-                        <p>Resumo</p>
-                        <img src="img/MateriaisDasAulas/10 - Arc.png">
-                    </div>
-
-                    <div id="exercicio" class="conteudo">
-                        <div class="exercicio-item" id="ex14">
-                            <h2>Exercício 14</h2>
-                            <div class="exercicios-img">
-                                <img src="animations/14/14.png" alt="Exercício 9" ">
-                            <button class=" btn-animacao" onclick="abrirPopup(14)"><img src="img/play.png" alt="Play"></button>
-                                <!-- Popup escondido -->
-                                <div id="popup14" class="popup">
-                                    <div class="popup-conteudo">
-                                        <span class="fechar" onclick="fecharPopup(14)">&times;</span>
-                                        <iframe class="animation" src="animations/14/14.html" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-
-                            </div>
+                <div id="exercicio" class="conteudo">
+                    <div class="exercicio-item">
+                        <h2>Exercício</h2>
+                        <div class="exercicios-img">
+                            <a href="animations/14/14.png" target="_blank">
+                                <img src="animations/14/14.png" alt="Exercício">
+                            </a>
+                            <button class="btn-animacao" onclick="abrirPagina('animations/14/14.html')">
+                                <img src="img/play.png" alt="Play">
+                            </button>
                         </div>
+                    </div>
                 </div>
 
-                    <div id="resposta" class="conteudo">
-                        <img src="animations/14/code14.png" >
-                    </div>
+                <div id="resposta" class="conteudo">
+                    <a href="animations/6/code6.png" target="_blank">
+                        <img src="animations/6/code6.png" alt="Resposta">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    
+<script>
+const aulas = [
+    { video:"https://www.youtube.com/embed/GT5JRtmZQ_U", resumo:"img/MateriaisDasAulas/21 - 1_Lei_newton.png", exercicioImg:null, exercicioLink:null, resposta:null },
+    { video:"https://www.youtube.com/embed/UNPPgKmpFnA", resumo:null, exercicioImg:"animations/14/14.png", exercicioLink:"animations/14/14.html", resposta:null },
+    { video:"https://www.youtube.com/embed/tIfvN0NnYMg", resumo:"img/MateriaisDasAulas/22 - 2_Lei_Newton.png", exercicioImg:null, exercicioLink:null, resposta:null }
+];
 
-   <!--
-    
-   <div class="last-text">
-       <p>© Developed 2025 by Gustavo</p>
-   </div>
-   
-   -->
+const videoIframe = document.querySelector(".video-container iframe");
+const resumoDiv = document.getElementById("resumo");
+const resumoImg = resumoDiv.querySelector("img");
+const exercicioDiv = document.getElementById("exercicio");
+const exercicioImg = exercicioDiv.querySelector("img");
+const exercicioBtn = exercicioDiv.querySelector(".btn-animacao");
+const respostaDiv = document.getElementById("resposta");
+const respostaImg = respostaDiv.querySelector("img");
 
+const botoesAula = document.querySelectorAll(".barra-lateral .aula");
+const botoes = document.querySelectorAll('.aba-btn');
+const conteudos = document.querySelectorAll('.conteudo');
 
+botoes.forEach(btn => {
+    btn.addEventListener('click', () => {
+        botoes.forEach(b => b.classList.remove('ativo'));
+        conteudos.forEach(c => c.classList.remove('ativo'));
+        btn.classList.add('ativo');
+        const alvo = document.getElementById(btn.dataset.alvo);
+        if(alvo.style.display !== "none") alvo.classList.add('ativo');
+    });
+});
 
-    <!-- scroll top -->
-    <a href="#home" class="scroll-top">
-        <i class='bx bx-up-arrow-alt'></i>
-    </a>
+function abrirPagina(endereco){window.open(endereco,"_blank");}
 
-    <!-- custom scrollreveal link -->
+botoesAula.forEach((btn,index)=>{
+    btn.addEventListener("click",()=>{
+        const aula = aulas[index];
+        if(!aula) return;
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+        videoIframe.src = aula.video;
 
-    <!-- custom js link -->
-    <script type="text/javascript" src="js/scriptMR.js"></script>
+        // Resumo
+        if(aula.resumo){
+            resumoDiv.style.display = "block";
+            resumoImg.src = aula.resumo;
+            resumoImg.parentElement.href = aula.resumo;
+        } else resumoDiv.style.display = "none";
 
+        // Exercício
+        if(aula.exercicioImg && aula.exercicioLink){
+            exercicioDiv.style.display = "block";
+            exercicioImg.src = aula.exercicioImg;
+            exercicioImg.parentElement.href = aula.exercicioImg;
+            exercicioBtn.setAttribute("onclick",`abrirPagina('${aula.exercicioLink}')`);
+        } else exercicioDiv.style.display = "none";
+
+        // Resposta
+        if(aula.resposta){
+            respostaDiv.style.display = "block";
+            respostaImg.src = aula.resposta;
+            respostaImg.parentElement.href = aula.resposta;
+        } else respostaDiv.style.display = "none";
+
+        // Atualiza abas: ativa a primeira disponível
+        let primeiraAtiva = false;
+        botoes.forEach(b=>{
+            const alvoDiv = document.getElementById(b.dataset.alvo);
+            if(alvoDiv.style.display!=="none" && !primeiraAtiva){
+                b.classList.add("ativo");
+                alvoDiv.classList.add("ativo");
+                primeiraAtiva=true;
+            }else b.classList.remove("ativo");
+            if(alvoDiv.style.display==="none") alvoDiv.classList.remove("ativo");
+        });
+    });
+});
+</script>
 </body>
-
 </html>

@@ -46,23 +46,32 @@
                 <div class="botoes">
                     <button class="aba-btn ativo" data-alvo="resumo">Resumo</button>
                     <button class="aba-btn" data-alvo="exercicio">Exercícios</button>
-                    <button class="aba-btn" data-alvo="resposta">Respostas</button>
+                    <button class="aba-btn" data-alvo="resposta">Resposta</button>
                 </div>
 
                 <div class="conteudos">
                     <div id="resumo" class="conteudo ativo">
-                        <h2>Resumo</h2>
-                        <p>Este é o resumo da aula — aqui você coloca uma explicação resumida do vídeo ou os principais conceitos abordados.</p>
+                        <a href="img/MateriaisDasAulas/10 - Arc.png" target="_blank">
+                            <img src="img/MateriaisDasAulas/10 - Arc.png" alt="Exercício 9">
+                        </a>
                     </div>
 
                     <div id="exercicio" class="conteudo">
-                        <h2>Exercícios</h2>
-                        <p>1. Resolva o problema X.<br>2. Calcule Y.<br>3. Explique Z.</p>
-                    </div>
+                        <div class="exercicio-item" id="ex14">
+                            <h2>Exercício 14</h2>
+                            <div class="exercicios-img">
+                                <a href="animations/14/14.png" target="_blank">
+                                    <img src="animations/14/14.png" alt="Exercício 9">
+                                </a>
+                            <button class=" btn-animacao" onclick="abrirPagina('animations/14/14.html')"><img src="img/play.png" alt="Play"></button>
 
+                            </div>
+                        </div>
+                </div>
                     <div id="resposta" class="conteudo">
-                        <h2>Respostas</h2>
-                        <p>Aqui ficam as respostas explicadas dos exercícios anteriores.</p>
+                        <a href="animations/6/code6.png" target="_blank">
+                            <img src="animations/6/code6.png" alt="Exercício 9">
+                        </a>
                     </div>
                 </div>
             </div>
