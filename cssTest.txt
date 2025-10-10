@@ -1,0 +1,6 @@
+
+.aula.ativo {
+    background-color: #ff9100;
+    color: white;
+    font-weight: bold;
+}

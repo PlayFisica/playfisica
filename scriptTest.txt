@@ -1,0 +1,29 @@
+// ---------------------- SISTEMA DE TROCA DE AULA ----------------------
+
+const aulas = document.querySelectorAll('.aula');
+const videoFrame = document.querySelector('.video-container iframe');
+const resumo = document.getElementById('resumo');
+const exercicio = document.getElementById('exercicio');
+const resposta = document.getElementById('resposta');
+
+aulas.forEach(aula => {
+    aula.addEventListener('click', () => {
+        // Remove destaque das outras aulas
+        aulas.forEach(a => a.classList.remove('ativo'));
+        aula.classList.add('ativo');
+
+        // Troca o vídeo
+        videoFrame.src = aula.dataset.video;
+
+        // Atualiza os textos
+        resumo.querySelector('p').innerHTML = aula.dataset.resumo;
+        exercicio.querySelector('p').innerHTML = aula.dataset.exercicio;
+        resposta.querySelector('p').innerHTML = aula.dataset.resposta;
+
+        // volta para a aba "Resumo" automaticamente
+        botoes.forEach(b => b.classList.remove('ativo'));
+        conteudos.forEach(c => c.classList.remove('ativo'));
+        document.querySelector('[data-alvo="resumo"]').classList.add('ativo');
+        resumo.classList.add('ativo');
+    });
+});

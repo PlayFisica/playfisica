@@ -46,36 +46,23 @@
                 <div class="botoes">
                     <button class="aba-btn ativo" data-alvo="resumo">Resumo</button>
                     <button class="aba-btn" data-alvo="exercicio">Exercícios</button>
-                    <button class="aba-btn" data-alvo="resposta">Resposta</button>
+                    <button class="aba-btn" data-alvo="resposta">Respostas</button>
                 </div>
 
                 <div class="conteudos">
                     <div id="resumo" class="conteudo ativo">
                         <h2>Resumo</h2>
-                        <p>Resumo</p>
-                        <img src="img/MateriaisDasAulas/10 - Arc.png">
+                        <p>Este é o resumo da aula — aqui você coloca uma explicação resumida do vídeo ou os principais conceitos abordados.</p>
                     </div>
 
                     <div id="exercicio" class="conteudo">
-                        <div class="exercicio-item" id="ex14">
-                            <h2>Exercício 14</h2>
-                            <div class="exercicios-img">
-                                <img src="animations/14/14.png" alt="Exercício 9" ">
-                            <button class=" btn-animacao" onclick="abrirPopup(14)"><img src="img/play.png" alt="Play"></button>
-                                <!-- Popup escondido -->
-                                <div id="popup14" class="popup">
-                                    <div class="popup-conteudo">
-                                        <span class="fechar" onclick="fecharPopup(14)">&times;</span>
-                                        <iframe class="animation" src="animations/14/14.html" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                </div>
+                        <h2>Exercícios</h2>
+                        <p>1. Resolva o problema X.<br>2. Calcule Y.<br>3. Explique Z.</p>
+                    </div>
 
                     <div id="resposta" class="conteudo">
-                        <img src="animations/14/code14.png" >
+                        <h2>Respostas</h2>
+                        <p>Aqui ficam as respostas explicadas dos exercícios anteriores.</p>
                     </div>
                 </div>
             </div>
