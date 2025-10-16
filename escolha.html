@@ -146,7 +146,14 @@
 
         function selecionarModo(modo) {
             localStorage.setItem('modoTela', modo);
-            window.location.href = `modulo${modulo}${modo}.html`;
+            const url = `modulo${modulo}${modo}.html`;
+            if (modo === 'R') {
+                // Abre a versão reduzida em uma nova aba
+                window.open(url, '_blank');
+            } else {
+                // Abre a versão amplificada na mesma aba
+                window.location.href = url;
+            }
         }
     </script>
 
