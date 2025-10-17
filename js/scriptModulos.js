@@ -11,6 +11,12 @@ let navbar = document.querySelector('.navbar');
 
 
 
+function abrirPagina(endereco) {
+    window.open(endereco, "_blank"); // abre em nova aba
+}
+
+
+
 
 function abrirPopup(num) {
   const popup = document.getElementById("popup" + num);
