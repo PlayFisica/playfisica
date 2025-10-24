@@ -1,118 +1,125 @@
-//Declara e define a gravidade
-let gravidade=0.2;
+// --- FÍSICA ---
+let gravidade = 0.2;
+let Forca_de_Arrasto = 0, coef_Arrasto = 0.5;
 
-//Declara a Força de Arrasto e o coeficiente de arrasto
-let Forca_de_Arrasto=0,coef_Arrasto=0.5;
+// --- CAIXA EM QUEDA LIVRE ---
+let Peso1 = 0, massa1 = 5, acel1, vely1 = 0, posy1 = 70;
 
-//Declara as variáveis da caixa em queda livre
-let Peso1=0,massa1=5, acel1, vely1=0, posy1=70;
+// --- CAIXA COM PARAQUEDAS ---
+let Peso2 = 0, massa2 = 5, acel2, vely2 = 0, posy2 = 70;
 
-//Declara as variáveis da caixa com paraquedas
-let Peso2=0,massa2=5, acel2, vely2=0, posy2=70;
+// --- BASE DE REFERÊNCIA (RESOLUÇÃO ORIGINAL) ---
+const larguraBase = 800;
+const alturaBase = 600;
+let escala;
 
 function setup() {
-  //Cria a tela
-  createCanvas(800, 600);
+  createCanvas(windowWidth, windowHeight);
+  escala = min(width / larguraBase, height / alturaBase);
 }
 
 function draw() {
-  //Dar cor ao plano de fundo
   background(220);
-  
-  //Define que as formas não terão contornos
-  strokeWeight (0);
-  
-  //Desenha o fundo vermelho
-  fill (244, 68, 45);
-  rect (0,0,800,250);
-  
-  //Desenha as nuvens azuis escuras
-  fill (165,167,218);
-  ellipse (120,250,160,80);
-  ellipse (500,250,160,250);
-  
-  //Desenha as nuvens brancas
-  fill (249,254,255);
-  ellipse (50,250,160,190);
-  ellipse (420,250,160,190);
-  ellipse (320,250,120,80);
-  ellipse (730,250,160,190);
-  
-  //Desenha as nuvens azuis claros
-  fill(200,217,243);
-  ellipse (0,250,120,140);
-  ellipse (800,250,150,140);
-  
-  //Desenha o fundo azul
-  fill (104,130,243);
-  rect (0,250,800,350);
-  
-  //Desenha os triângulos cinzas
-  fill (126,142,168);
-  triangle (0,350,0,600,350,600);
-  triangle (320,450,340,530,395,400);
-  
-  //Desenha os triângulos verdes-azuis escuros
-  fill (58,115,124);
-  triangle (500,180,300,600,500,600);
-  fill (43,101,113);
-  triangle (500,180,560,285,500,385);
-  
-  //Desenha os triângulos verdes claros
-  fill (83,142,84);
-  triangle (235,200,100,600,235,600);
-  triangle (620,170,380,600,620,600);
-  triangle (800,370,755,450,800,540);
-  
-  //Desenha os triângulos verdes escuros
-  fill (51,108,63);
-  triangle (235,200,370,600,235,600);
-  triangle (620,170,830,600,620,600);
-  
-  //Desenha o triângulo vermelho
-  fill (125,51,50);
-  triangle (0,500,0,600,60,600);
-  
-  //Desenha a parte da frente das caixas
-  fill (208,143,77);
-  square (150,posy1,50);
-  square (550,posy2,50);
-  
-  //Desenha a parte do lado das caixas
-  fill (173,113,59);
-  quad (135,posy1-10,150,posy1,150,posy1+50,135,posy1+40);
-  quad (535,posy2-10,550,posy2,550,posy2+50,535,posy2+40);
-  
-  //Desenha a parte de cima das caixas
-  fill (183,133,74);
-  quad (135,posy1-10,185,posy1-10,200,posy1,150,posy1);
-  quad (535,posy2-10,585,posy2-10,600,posy2,550,posy2);
-  
-  //Desenha o paraquedas
-  fill (1,202,150);
-  ellipse (570, posy2-90,170,100);
-  strokeWeight (2);
-  line (488,posy2-80,535,posy2+20);
-  line (653,posy2-80,602,posy2+20);
-  
-  //Aplica a queda livre
+  strokeWeight(0);
+
+  // --- CÉU VERMELHO ---
+  fill(244, 68, 45);
+  rect(0, 0, 800 * escala, 250 * escala);
+
+  // --- NUVENS AZUIS ESCURAS ---
+  fill(165, 167, 218);
+  ellipse(120 * escala, 250 * escala, 160 * escala, 80 * escala);
+  ellipse(500 * escala, 250 * escala, 160 * escala, 250 * escala);
+
+  // --- NUVENS BRANCAS ---
+  fill(249, 254, 255);
+  ellipse(50 * escala, 250 * escala, 160 * escala, 190 * escala);
+  ellipse(420 * escala, 250 * escala, 160 * escala, 190 * escala);
+  ellipse(320 * escala, 250 * escala, 120 * escala, 80 * escala);
+  ellipse(730 * escala, 250 * escala, 160 * escala, 190 * escala);
+
+  // --- NUVENS AZUIS CLARAS ---
+  fill(200, 217, 243);
+  ellipse(0 * escala, 250 * escala, 120 * escala, 140 * escala);
+  ellipse(800 * escala, 250 * escala, 150 * escala, 140 * escala);
+
+  // --- CÉU AZUL ---
+  fill(104, 130, 243);
+  rect(0, 250 * escala, 800 * escala, 350 * escala);
+
+  // --- MONTANHAS CINZAS ---
+  fill(126, 142, 168);
+  triangle(0 * escala, 350 * escala, 0 * escala, 600 * escala, 350 * escala, 600 * escala);
+  triangle(320 * escala, 450 * escala, 340 * escala, 530 * escala, 395 * escala, 400 * escala);
+
+  // --- MONTANHAS VERDE-AZUL ESCURO ---
+  fill(58, 115, 124);
+  triangle(500 * escala, 180 * escala, 300 * escala, 600 * escala, 500 * escala, 600 * escala);
+  fill(43, 101, 113);
+  triangle(500 * escala, 180 * escala, 560 * escala, 285 * escala, 500 * escala, 385 * escala);
+
+  // --- MONTANHAS VERDES CLARAS ---
+  fill(83, 142, 84);
+  triangle(235 * escala, 200 * escala, 100 * escala, 600 * escala, 235 * escala, 600 * escala);
+  triangle(620 * escala, 170 * escala, 380 * escala, 600 * escala, 620 * escala, 600 * escala);
+  triangle(800 * escala, 370 * escala, 755 * escala, 450 * escala, 800 * escala, 540 * escala);
+
+  // --- MONTANHAS VERDES ESCURAS ---
+  fill(51, 108, 63);
+  triangle(235 * escala, 200 * escala, 370 * escala, 600 * escala, 235 * escala, 600 * escala);
+  triangle(620 * escala, 170 * escala, 830 * escala, 600 * escala, 620 * escala, 600 * escala);
+
+  // --- TRIÂNGULO VERMELHO ---
+  fill(125, 51, 50);
+  triangle(0 * escala, 500 * escala, 0 * escala, 600 * escala, 60 * escala, 600 * escala);
+
+  // --- CAIXAS ---
+  fill(208, 143, 77);
+  square(150 * escala, posy1 * escala, 50 * escala);
+  square(550 * escala, posy2 * escala, 50 * escala);
+
+  // --- LADOS DAS CAIXAS ---
+  fill(173, 113, 59);
+  quad(135 * escala, (posy1 - 10) * escala, 150 * escala, posy1 * escala, 150 * escala, (posy1 + 50) * escala, 135 * escala, (posy1 + 40) * escala);
+  quad(535 * escala, (posy2 - 10) * escala, 550 * escala, posy2 * escala, 550 * escala, (posy2 + 50) * escala, 535 * escala, (posy2 + 40) * escala);
+
+  // --- TAMPO DAS CAIXAS ---
+  fill(183, 133, 74);
+  quad(135 * escala, (posy1 - 10) * escala, 185 * escala, (posy1 - 10) * escala, 200 * escala, posy1 * escala, 150 * escala, posy1 * escala);
+  quad(535 * escala, (posy2 - 10) * escala, 585 * escala, (posy2 - 10) * escala, 600 * escala, posy2 * escala, 550 * escala, posy2 * escala);
+
+  // --- PARAQUEDAS ---
+  fill(1, 202, 150);
+  ellipse(570 * escala, (posy2 - 90) * escala, 170 * escala, 100 * escala);
+  strokeWeight(2 * escala);
+  line(488 * escala, (posy2 - 80) * escala, 535 * escala, (posy2 + 20) * escala);
+  line(653 * escala, (posy2 - 80) * escala, 602 * escala, (posy2 + 20) * escala);
+
+  // --- FÍSICA ---
+  // Caixa 1: queda livre
   Peso1 = massa1 * gravidade;
-  acel1 = Peso1/massa1;
-  vely1 = vely1 + acel1;
-  posy1 = posy1 + vely1;
-  if (posy1>550){
+  acel1 = Peso1 / massa1;
+  vely1 += acel1;
+  posy1 += vely1;
+  if (posy1 > 550) {
     vely1 = 0;
     posy1 = 550;
   }
-  
-  //Aplica a resistência do ar
+
+  // Caixa 2: resistência do ar (paraquedas)
   Forca_de_Arrasto = coef_Arrasto * vely2;
   Peso2 = massa2 * gravidade;
-  acel2 = (Peso2-Forca_de_Arrasto)/massa2;
-  vely2 = vely2 + acel2;
-  posy2 = posy2 + vely2;
-  if (posy2>550){
-    vely2=0;
-    posy2=550;
+  acel2 = (Peso2 - Forca_de_Arrasto) / massa2;
+  vely2 += acel2;
+  posy2 += vely2;
+  if (posy2 > 550) {
+    vely2 = 0;
+    posy2 = 550;
   }
+}
+
+// --- REAJUSTE AO REDIMENSIONAR A JANELA ---
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  escala = min(width / larguraBase, height / alturaBase);
 }
