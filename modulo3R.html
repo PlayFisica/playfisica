@@ -14,7 +14,8 @@ body{background:#f7f7f7;color:#111;}
 .barra-lateral{width:25%;height:100%;background:#1e1e1e;display:flex;flex-direction:column;align-items:center;padding:1rem;overflow-y:auto;}
 .barra-lateral h2{color:#ff9100;margin-bottom:1rem;}
 .aula{background:#333;padding:.8rem;width:100%;text-align:center;margin-bottom:.7rem;border-radius:8px;cursor:pointer;transition:background .3s;color:#fff;}
-.aula:hover{background:#ff9100;}
+.aula:hover{background:#ff91006e;}
+.aula.ativa{background:#ff9100;}
 .principal{width:75%;height:100%;display:flex;flex-direction:column;background:#f7f7f7;color:#111;}
 .video{flex:1;display:flex;justify-content:center;align-items:center;overflow:hidden;padding:1rem 0;background:#000;}
 .video-container{width:100%;max-width:900px;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.4);}
@@ -32,6 +33,17 @@ body{background:#f7f7f7;color:#111;}
         <div class="aula">1º Lei de Newton no P5.js</div>
         <div class="aula">Exercício 14</div>
         <div class="aula">2º Lei de Newton no P5.js</div>
+        <div class="aula">Exercício 15</div>
+        <div class="aula">Aplicação da 3º Lei de Newton em um jogo usando o P5.js</div>
+        <div class="aula">Aplicação da Força de Atrito em um jogo usando o P5.js</div>
+        <div class="aula">Aplicação da Força de Arrasto em um jogo usando o P5.js</div>
+        <div class="aula">Exercício 16</div>
+        <div class="aula">Aplicação da Tração e da Força Elástica em um jogo usando o P5.js</div>
+        <div class="aula">Exercício 17</div>
+        <div class="aula">Exercício 18</div>
+        <div class="aula">Formas de Energia na Física e sua relação com os jogos</div>
+        <div class="aula">Aplicação do Efeito Bounce em um jogo usando o P5.js</div>
+        <div class="aula">Exercício 19</div>
     </div>
 
     <div class="principal">
@@ -46,9 +58,20 @@ body{background:#f7f7f7;color:#111;}
 
 <script>
 const aulas = [
-    { video:"https://www.youtube.com/embed/GT5JRtmZQ_U", resumo:"img/Resumo/3/1.html", exercicio:null, resposta:null },
-    { video:"https://www.youtube.com/embed/UNPPgKmpFnA", resumo:null, exercicio:"animations/14/14.html", resposta:"animations/14/code14.png" },
-    { video:"https://www.youtube.com/embed/tIfvN0NnYMg", resumo:"img/Resumo/3/2.html", exercicio:null, resposta:null }
+    { video:"https://www.youtube.com/embed/GT5JRtmZQ_U", resumo:"img/Resumo/3/1.html", exercicio:null, resposta:null }, //37
+    { video:"https://www.youtube.com/embed/UNPPgKmpFnA", resumo:null, exercicio:"animations/14/14.html", resposta:"animations/14/code14.png" }, //38
+    { video:"https://www.youtube.com/embed/tIfvN0NnYMg", resumo:"img/Resumo/3/2.html", exercicio:null, resposta:null }, //39
+    { video:"https://www.youtube.com/embed/N7MFMdN2LWQ", resumo:null, exercicio:"animations/15/15.html", resposta:"animations/15/code15.png" }, //40
+    { video:"https://www.youtube.com/embed/YYmVHl8cNuk", resumo:"img/Resumo/3/3.html", exercicio:null, resposta:null }, //41
+    { video:"https://www.youtube.com/embed/oUxfT7Ri7q0", resumo:"img/Resumo/3/4.html", exercicio:null, resposta:null }, //42
+    { video:"https://www.youtube.com/embed/TCXg3PqnaG4", resumo:"img/Resumo/3/5.html", exercicio:null, resposta:null }, //43
+    { video:"https://www.youtube.com/embed/TB9p5pHpUJs", resumo:null, exercicio:"animations/16/16.html", resposta:"animations/16/code16.png" }, //44
+    { video:"https://www.youtube.com/embed/UIeMNLA02PM", resumo:"img/Resumo/3/6.html", exercicio:null, resposta:null }, //45
+    { video:"https://www.youtube.com/embed/cXm2ZcC_qGo", resumo:null, exercicio:"animations/17/17.html", resposta:"animations/17/code17.png" }, //46
+    { video:"https://www.youtube.com/embed/x1RCk37uvcQ", resumo:null, exercicio:"animations/18/18.html", resposta:"animations/18/code18.png" }, //47
+    { video:"https://www.youtube.com/embed/1FsY61SGVoo", resumo:"img/Resumo/3/7.html", exercicio:null, resposta:null }, //48
+    { video:"https://www.youtube.com/embed/m7hHSarABFI", resumo:"img/Resumo/3/8.html", exercicio:null, resposta:null }, //49
+    { video:"https://www.youtube.com/embed/nRZnp1Mys1M", resumo:null, exercicio:"animations/19/19.html", resposta:"animations/19/code19.png" }, //50
 ];
 
 const videoIframe = document.querySelector(".video-container iframe");
@@ -68,6 +91,11 @@ function criarBotao(texto, acao) {
 function carregarAula(index){
     const aula = aulas[index];
     if(!aula) return;
+
+    aulasBtns.forEach(btn => btn.classList.remove("ativa"));
+    aulasBtns[index].classList.add("ativa");
+
+
     videoIframe.src = aula.video;
     botoesContainer.innerHTML = "";
     if(aula.resumo){
@@ -90,6 +118,7 @@ aulasBtns.forEach((btn,index)=>{
 
 // Carrega automaticamente a Aula 1 ao abrir a página
 carregarAula(0);
+aulasBtns[0].classList.add("ativa");
 </script>
 </body>
 </html>
