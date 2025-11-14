@@ -308,8 +308,6 @@ section {
 .exercicios-img {
 	text-align: center;
 	position: relative;
-	/* necessário para posicionar o botão dentro */
-	display: inline-block;
 }
 
 .exercicios-img img {

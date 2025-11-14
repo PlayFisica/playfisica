@@ -18,6 +18,21 @@ function abrirPagina(endereco) {
 
 
 
+const video = document.getElementById("animation");
+
+video.addEventListener("loadeddata", () => {
+    video.currentTime = 0;
+    video.pause();
+});
+
+function reiniciarVideo() {
+    video.currentTime = 0; 
+    video.play();
+}
+
+
+
+
 function abrirPopup(num) {
   const popup = document.getElementById("popup" + num);
   const iframe = popup.querySelector("iframe");

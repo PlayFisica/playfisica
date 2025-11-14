@@ -149,37 +149,44 @@
             <h1>Material das Aulas</h1>
 
             <div class="lesson">
-                <h2>1. Primeira Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Primeira Lei de Newton, ou Lei da Inércia, estabelece que um objeto permanece em seu estado de repouso ou movimento retilíneo uniforme, a menos que uma força resultante atue sobre ele. A imagem ilustra esse conceito, mostrando que se a força resultante é zero, a velocidade do objeto não muda. Para aplicar essa lei em P5.js, é necessário entender operações matemáticas e comparativas, e a estrutura de controle if.</p>
+                <h2>1. Variáveis mouseX e mouseY</h2>
+                <p class="lesson-summary">As variáveis mouseX e mouseY são variáveis automáticas e essenciais no p5.js que rastreiam a posição do cursor do mouse.
+                <br>- mouseX: Guarda a posição atual do mouse, em pixels, no eixo X (horizontal), relativa ao canto superior esquerdo do canvas.
+                <br>- mouseY: Guarda a posição atual do mouse, em pixels, no eixo Y (vertical), relativa ao canto superior esquerdo do canvas.
+                <br>Ambas as variáveis são atualizadas automaticamente a cada quadro (frame) do programa pelo motor do p5.js, o que significa que o valor delas reflete a posição do mouse sempre que o draw() é executado. Elas permitem criar interatividade, ligando a posição do mouse a coordenadas, cores ou tamanhos de formas.</p>
                 <div class="lesson-image">
-                    <img src="img/MateriaisDasAulas/21 - 1_Lei_newton.png" alt="Primeira Lei de Newton (Lei da Inércia) e sua aplicação em P5.js">
+                    <img src="img/MateriaisDasAulas/30 - MouseX e MouseY.png">
                 </div>
                 <div class="lesson-links">
-                    <a href="https://www.youtube.com/watch?v=GT5JRtmZQ_U" target="_blank">Vídeo Aula</a>
-                    <a href="#ex14">Exercício Complementar</a>
+                    <a href="https://www.youtube.com/watch?v=JbxS5hvTsmo" target="_blank">Vídeo Aula</a>
+                    <a href="#ex21">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Note como a Primeira Lei de Newton, ou Lei da Inércia, é fundamental para entender o movimento dos objetos. Se a força resultante sobre um objeto for zero (Fr = 0), ele manterá seu estado atual: um objeto em repouso permanecerá em repouso, e um objeto em movimento continuará em movimento com velocidade e direção constantes. A única forma de alterar esse estado é aplicando uma força. Em P5.js, isso se traduz em posicaox = posicaox + velocidade; e posicaoy = posicaoy + velocidade, onde a velocidade constante (ou zero) resulta em um Movimento Retilíneo Uniforme (MRU) ou ausência de movimento.
+                    <strong>Observação:</strong> É crucial notar que os valores de mouseX e mouseY são calculados em relação à área do canvas (a tela de desenho), e não em relação à página inteira do navegador. Além disso, se o mouse for movido para fora do canvas, as variáveis mouseX e mouseY continuam a armazenar a última posição válida (o último ponto onde estavam dentro da área de desenho), não assumindo um valor negativo ou nulo.
                 </div>
             </div>
 
 
  
             <div class="lesson">
-                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um Movimento Retilíneo Uniformemente Variado (MRUV).</p>
+                <h2>2. Variáveis pmouseX e pmouseY</h2>
+                <p class="lesson-summary">As variáveis pmouseX e pmouseY (P de previous, ou anterior) são variáveis automáticas que armazenam a posição do mouse do quadro (frame) imediatamente anterior. Elas são cruciais para calcular a velocidade e a direção do movimento do mouse, permitindo criar rastros e efeitos dinâmicos.
+                    <br>- pmouseX: Guarda a posição anterior do mouse, em pixels, no eixo X (horizontal).
+                    <br>- pmouseY: Guarda a posição anterior do mouse, em pixels, no eixo Y (vertical).
+                    <br>Assim como as variáveis mouseX e mouseY, as variáveis pmouseX e pmouseY são atualizadas automaticamente a cada quadro pelo motor do p5.js, sempre que o draw() é executado.</p>
                 <div class="lesson-image">
-                    <img src="img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
+                    <img src="img/MateriaisDasAulas/31 - PmouseX e PmouseY.png" alt="Operações com IF">
                 </div>
                 <div class="lesson-links">
                     <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
                     <a href="javascript:void(0)">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
+                    <strong>Observação:</strong> O valor de pmouseX e pmouseY reflete onde o mouse estava no frame anterior, enquanto mouseX e mouseY refletem onde ele está no frame atual. A diferença entre mouseX e pmouseX (ou mouseY e pmouseY) pode ser usada para medir a distância percorrida pelo mouse em um único frame. É importante lembrar que essas coordenadas são calculadas em relação à área do canvas, e se o mouse sair da tela, elas continuarão a armazenar a última posição válida do frame anterior.
                 </div>
             </div>
 
+            
         </div>
     </section>
 
@@ -355,6 +362,30 @@
                     </details>
                 </div>
             </div>
+
+
+            
+            <div class="exercicio-item" id="ex19">
+                <h2>Exercício 19</h2>
+                <div class="exercicios-img">
+                    <video id="animation" src="video.mp4" preload="auto"></video>
+				    <button class=" btn-animacao" onclick="reiniciarVideo()"><img src="img/play.png" alt="Play"></button>
+                    <details>
+                        <summary>
+                            <span class="toggle-text">Mostrar resposta</span>
+                            <span class="arrow">▶</span>
+                        </summary>
+                        <div class="resposta">
+                            <div class="exercicios-img">
+                                <img src="animations/19/code19.png" alt="Exercício 19">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+
+
 
         </div>
     </section>
