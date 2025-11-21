@@ -186,7 +186,78 @@
                 </div>
             </div>
 
-            
+            <div class="lesson">
+                <h2>3. Função random()</h2>
+                <p class="lesson-summary">A função <code>random()</code> no p5.js é usada para gerar números aleatórios, o que é fundamental para criar comportamentos imprevisíveis e dinâmicos em jogos e animações.
+                <br>- <code>random(max)</code>: Gera um número de ponto flutuante entre 0 (inclusivo) e o valor máximo (<code>max</code>) especificado (exclusivo).
+                <br>- <code>random(min, max)</code>: Gera um número de ponto flutuante entre um valor mínimo (<code>min</code>) e um máximo (<code>max</code>).
+                <br>Para obter números inteiros, você pode usar a função <code>floor()</code> ou <code>int()</code> para arredondar o resultado para baixo. Isso é útil para selecionar itens aleatórios de uma lista ou para posições em uma grade.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/32 - Random.png" alt="Função random()">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=av28aDGlpfU" target="_blank">Vídeo Aula</a>
+                    <a href="#ex23">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> A função <code>random()</code> retorna um número de ponto flutuante (com casas decimais). Se você precisar de um número inteiro, como para o índice de um array, certifique-se de convertê-lo usando <code>int()</code> ou <code>floor()</code>. Por exemplo, <code>int(random(5))</code> retornará um número inteiro entre 0 e 4.
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h2>4. Funções mouseClicked() e doubleClicked()</h2>
+                <p class="lesson-summary">As funções <code>mouseClicked()</code> e <code>doubleClicked()</code> são funções de evento que são chamadas automaticamente pelo p5.js em resposta a ações do mouse.
+                <br>- <code>mouseClicked()</code>: É executada uma vez após um botão do mouse ser pressionado e liberado. É ideal para ações que devem ocorrer com um único clique, como selecionar um objeto ou ativar um botão.
+                <br>- <code>doubleClicked()</code>: É executada uma vez após dois cliques rápidos do mouse no mesmo local. É útil para ações secundárias ou mais específicas, como abrir um menu de propriedades.
+                <br>Essas funções ajudam a organizar o código, separando a lógica de desenho contínuo (em <code>draw()</code>) da lógica de interação baseada em eventos.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/33 - MouseClicked e DoubleClicked.png" alt="Variável mouseIsPressed">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=PwVHEquhr7E" target="_blank">Vídeo Aula</a>
+                    <a href="#ex24">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Um clique duplo também registrará dois cliques simples. O p5.js tem um tempo limite para diferenciar um clique duplo de dois cliques simples. O código dentro dessas funções é executado fora do loop principal de <code>draw()</code>.
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h2>5. Variáveis movedX e movedY</h2>
+                <p class="lesson-summary">As variáveis <code>movedX</code> e <code>movedY</code> no p5.js medem o deslocamento do mouse desde o último quadro (frame). Elas são úteis para detectar a velocidade e a direção do movimento do mouse de forma instantânea.
+                <br>- <code>movedX</code>: Armazena a diferença entre a posição atual (<code>mouseX</code>) e a posição anterior (<code>pmouseX</code>) no eixo X.
+                <br>- <code>movedY</code>: Armazena a diferença entre a posição atual (<code>mouseY</code>) e a posição anterior (<code>pmouseY</code>) no eixo Y.
+                <br>Essas variáveis são ideais para criar interações que dependem da velocidade do movimento, como alterar o tamanho de um pincel ou a cor de um objeto enquanto o mouse se move.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/34 - MovedX e MovedY.png" alt="Variável mouseButton">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=kwynRNl_0ys" target="_blank">Vídeo Aula</a>
+                    <a href="#ex25">Exercício Complementar</a> <!-- O exercício 25 parece ser o mais relacionado -->
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Os valores de <code>movedX</code> e <code>movedY</code> são redefinidos a cada quadro. Se o mouse estiver parado, seus valores serão 0. Use-os dentro da função <code>draw()</code> para monitorar continuamente o movimento do mouse.
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h2>6. Variáveis mouseIsPressed e mouseButton</h2>
+                <p class="lesson-summary">A variável <code>mouseIsPressed</code> é uma variável booleana que verifica se algum botão do mouse está pressionado, enquanto <code>mouseButton</code> identifica qual botão é.
+                <br>- <code>mouseIsPressed</code>: É <code>true</code> enquanto o botão do mouse estiver pressionado e <code>false</code> caso contrário. Ideal para ações contínuas como arrastar.
+                <br>- <code>mouseButton</code>: Armazena <code>LEFT</code>, <code>RIGHT</code>, ou <code>CENTER</code>, permitindo criar diferentes ações para cada botão do mouse.
+                <br>Usadas em conjunto, elas permitem criar interações complexas, como desenhar com o botão esquerdo e apagar com o direito.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/35 - MousePressed e MouseReleased.png" alt="Função mouseClicked()">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=vUDOojeVk6Y" target="_blank">Vídeo Aula</a>
+                    <a href="#ex25">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Para usar <code>mouseButton</code> de forma eficaz, verifique seu valor dentro de uma condição que também testa se <code>mouseIsPressed</code> é verdadeiro (<code>if (mouseIsPressed) { ... }</code>) ou dentro das funções de evento <code>mousePressed()</code> ou <code>mouseReleased()</code>.
+                </div>
+            </div>
+
         </div>
     </section>
 
