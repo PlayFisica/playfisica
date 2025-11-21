@@ -745,27 +745,16 @@
     <section class="materials" id="material">
         <div class="materials-container">
             <div class="lesson">
-                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente
-                    proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem
-                    ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para
-                    a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para
-                    encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a
-                    cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um
-                    Movimento Retilíneo Uniformemente Variado (MRUV).</p>
+                <h2>9. Força Gravitacional Universal em P5.js</h2>
+                <p class="lesson-summary">A Lei da Gravitação Universal de Newton descreve a força de atração entre dois objetos com massa. A força é diretamente proporcional ao produto de suas massas e inversamente proporcional ao quadrado da distância entre eles. Em P5.js, isso nos permite simular sistemas planetários, órbitas de satélites ou a atração entre múltiplos corpos em um jogo, aplicando uma força a cada objeto que "puxa" em direção ao outro.</p>
                 <div class="lesson-image">
-                    <img src="../../../img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
+                    <img src="../../../img/MateriaisDasAulas/29 - Momento Linear.png" alt="Força Gravitacional Universal em P5.js">
                 </div>
                 <div class="lesson-links">
-                    <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
                     <a href="javascript:void(0)">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa
-                    (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade
-                    = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas
-                    etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o
-                    objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
+                    <strong>Observação:</strong> Para implementar a gravidade universal em P5.js, você precisa: 1) Calcular o vetor de direção do objeto A para o objeto B. 2) Calcular a distância entre eles. 3) Calcular a magnitude da força usando a fórmula `F = (G * m1 * m2) / (distancia * distancia)`. 4) Aplicar essa força ao objeto A na direção do objeto B (e vice-versa). O `G` é a constante gravitacional, que pode ser ajustada para obter o efeito desejado na simulação.
                 </div>
             </div>
         </div>

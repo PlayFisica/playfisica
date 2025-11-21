@@ -745,29 +745,20 @@
     <section class="materials" id="material">
         <div class="materials-container">
             <div class="lesson">
-                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente
-                    proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem
-                    ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para
-                    a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para
-                    encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a
-                    cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um
-                    Movimento Retilíneo Uniformemente Variado (MRUV).</p>
+                <h2>8. Efeito "Bounce" (Colisão Elástica) em P5.js</h2>
+                <p class="lesson-summary">O efeito "bounce", ou quicar, é uma simulação de uma colisão elástica, onde um objeto inverte sua velocidade ao atingir uma superfície. Em uma colisão perfeitamente elástica, a energia cinética é conservada. Em P5.js, a maneira mais simples de simular isso é detectar quando um objeto atinge um limite (como a borda da tela) e inverter o componente de sua velocidade que é perpendicular a essa superfície. Por exemplo, ao atingir o chão, a velocidade vertical (`vy`) é multiplicada por -1.</p>
                 <div class="lesson-image">
-                    <img src="../../../img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
+                    <img src="../../../img/MateriaisDasAulas/28 - Colisões.png" alt="Efeito Bounce (Colisão Elástica) em P5.js">
                 </div>
                 <div class="lesson-links">
-                    <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
+                    <a href="https://www.youtube.com/watch?v=m7hHSarABFI" target="_blank">Vídeo Aula</a>
                     <a href="javascript:void(0)">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa
-                    (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade
-                    = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas
-                    etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o
-                    objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
+                    <strong>Observação:</strong> Para um efeito de "bounce" mais realista, pode-se introduzir um "coeficiente de restituição" (um valor entre 0 e 1). Em vez de simplesmente inverter a velocidade (`velocidade = velocidade * -1`), você a multiplicaria por este coeficiente (`velocidade = velocidade * -coeficiente`). Um coeficiente de 1 representa uma colisão perfeitamente elástica (quica de volta à mesma altura), enquanto um valor menor que 1 simula uma colisão inelástica, onde parte da energia é perdida e o objeto quica cada vez mais baixo.
                 </div>
             </div>
+
         </div>
     </section>
 </body>

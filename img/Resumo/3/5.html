@@ -745,27 +745,17 @@
     <section class="materials" id="material">
         <div class="materials-container">
             <div class="lesson">
-                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente
-                    proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem
-                    ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para
-                    a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para
-                    encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a
-                    cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um
-                    Movimento Retilíneo Uniformemente Variado (MRUV).</p>
+                <h2>5. Força de Arrasto (Resistência do Ar) e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Força de Arrasto, ou resistência do ar (ou de qualquer fluido), é uma força que se opõe ao movimento de um objeto através de um fluido. Sua magnitude depende da velocidade do objeto, da sua forma, da densidade do fluido e da área da seção transversal do objeto. Em P5.js, podemos simular o arrasto aplicando uma força que atua na direção oposta à velocidade do objeto, com uma magnitude que geralmente é proporcional ao quadrado da velocidade. Isso é crucial para simular a queda de objetos, projéteis e o movimento de veículos em ambientes com fluidos.</p>
                 <div class="lesson-image">
-                    <img src="../../../img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
+                    <img src="../../../img/MateriaisDasAulas/25 - Força de Arrasto.png" alt="Força de Arrasto (Resistência do Ar) e sua aplicação em P5.js">
                 </div>
                 <div class="lesson-links">
-                    <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
+                    <a href="https://www.youtube.com/watch?v=TCXg3PqnaG4" target="_blank">Vídeo Aula</a>
                     <a href="javascript:void(0)">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa
-                    (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade
-                    = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas
-                    etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o
-                    objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
+                    <strong>Observação:</strong> A simulação da força de arrasto em P5.js adiciona uma camada importante de realismo a qualquer objeto que se mova através de um meio fluido. Para implementá-la, você precisará calcular a força com base na velocidade do objeto (geralmente `velocidade.magSq()`), um coeficiente de arrasto e a densidade do "ar" ou "água" simulada. Essa força deve ser aplicada na direção oposta ao vetor de velocidade, fazendo com que o objeto desacelere mais rapidamente em altas velocidades.
                 </div>
             </div>
         </div>

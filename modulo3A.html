@@ -201,6 +201,116 @@
                 </div>
             </div>
 
+
+            <div class="lesson">
+                <h2>3. Terceira Lei de Newton e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Terceira Lei de Newton, também conhecida como Lei da Ação e Reação, afirma que para toda ação existe uma reação igual e oposta. Isso significa que as forças sempre ocorrem em pares: se um objeto A exerce uma força sobre um objeto B, então o objeto B exerce uma força de igual magnitude e direção oposta sobre o objeto A. Em P5.js, podemos simular essa interação aplicando forças opostas a dois objetos que interagem, como em colisões ou empurrões, garantindo que a física do jogo seja realista.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/23 - 3_Lei_Newton.png" alt="Terceira Lei de Newton (Ação e Reação) e sua aplicação em P5.js">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=YYmVHl8cNuk" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Entender a Terceira Lei de Newton é crucial para simular interações realistas entre objetos. Em P5.js, ao programar a interação entre dois corpos, é fundamental aplicar forças iguais e opostas para cada ação. Por exemplo, se uma bola colide com uma parede, a força que a bola exerce na parede é igual e oposta à força que a parede exerce na bola. Isso garante que o sistema como um todo mantenha o momento, um conceito fundamental na física.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>4. Força de Atrito e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Força de Atrito é uma força que se opõe ao movimento relativo entre duas superfícies em contato. Ela é fundamental para entender por que objetos param ou por que é preciso aplicar uma força contínua para mantê-los em movimento. Em P5.js, podemos simular o atrito aplicando uma força que atua na direção oposta à velocidade do objeto, com uma magnitude proporcional à força normal e ao coeficiente de atrito. Isso adiciona realismo às simulações, fazendo com que objetos desacelerem e parem naturalmente.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/24 - Forca_de_Atrito.png" alt="Força de Atrito e sua aplicação em P5.js">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=oUxfT7Ri7q0" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> A força de atrito é essencial para simular ambientes realistas. Em P5.js, para implementá-la, você precisará calcular a força normal (geralmente igual à força peso em superfícies planas), multiplicar pelo coeficiente de atrito e aplicar essa força na direção oposta ao vetor de velocidade do objeto. Isso fará com que o objeto perca energia e desacelere, simulando o comportamento de objetos em superfícies reais.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>5. Força de Arrasto (Resistência do Ar) e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Força de Arrasto, ou resistência do ar (ou de qualquer fluido), é uma força que se opõe ao movimento de um objeto através de um fluido. Sua magnitude depende da velocidade do objeto, da sua forma, da densidade do fluido e da área da seção transversal do objeto. Em P5.js, podemos simular o arrasto aplicando uma força que atua na direção oposta à velocidade do objeto, com uma magnitude que geralmente é proporcional ao quadrado da velocidade. Isso é crucial para simular a queda de objetos, projéteis e o movimento de veículos em ambientes com fluidos.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/25 - Força de Arrasto.png" alt="Força de Arrasto (Resistência do Ar) e sua aplicação em P5.js">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=TCXg3PqnaG4" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> A simulação da força de arrasto em P5.js adiciona uma camada importante de realismo a qualquer objeto que se mova através de um meio fluido. Para implementá-la, você precisará calcular a força com base na velocidade do objeto (geralmente `velocidade.magSq()`), um coeficiente de arrasto e a densidade do "ar" ou "água" simulada. Essa força deve ser aplicada na direção oposta ao vetor de velocidade, fazendo com que o objeto desacelere mais rapidamente em altas velocidades.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>6. Tração e Força Elástica em P5.js</h2>
+                <p class="lesson-summary">A Força de Tração é transmitida através de cordas ou cabos quando são puxados, enquanto a Força Elástica surge em molas ou objetos elásticos quando são deformados (esticados ou comprimidos). Em P5.js, podemos simular a tração para criar pêndulos ou conectar objetos, e a força elástica (usando a Lei de Hooke) para criar sistemas de molas, suspensões de veículos ou comportamentos de "quicar" realistas.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/26 - Outras Forças.png" alt="Tração e Força Elástica em P5.js">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=UIeMNLA02PM" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Para simular a força elástica (Lei de Hooke), a fórmula é `F = -k * x`, onde `k` é a constante da mola e `x` é o deslocamento a partir da posição de repouso. Em P5.js, você calcula o vetor de deslocamento entre o objeto e o ponto de ancoragem da mola, determina sua magnitude e aplica uma força na direção oposta, proporcional a essa magnitude. Isso cria um movimento oscilatório característico.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>7. Formas de Energia e Conservação em P5.js</h2>
+                <p class="lesson-summary">Na física, a energia existe em várias formas, como Cinética (energia do movimento) e Potencial (energia armazenada, como a gravitacional ou elástica). O princípio da Conservação de Energia afirma que a energia total de um sistema isolado permanece constante, apenas se transformando de uma forma para outra. Em P5.js, podemos visualizar essa transformação, por exemplo, em um pêndulo, onde a energia potencial no ponto mais alto se converte em energia cinética no ponto mais baixo.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/27 - Energia.png" alt="">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=1FsY61SGVoo" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Embora não calculemos explicitamente a energia em joules em muitas simulações de P5.js, os princípios de conservação são o resultado natural da aplicação correta das leis da física. Ao simular forças como gravidade e elasticidade sem adicionar ou remover energia artificialmente (como através de um atrito não simulado), o comportamento do sistema (como a altura máxima de um salto) refletirá a conservação de energia.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>8. Efeito "Bounce" (Colisão Elástica) em P5.js</h2>
+                <p class="lesson-summary">O efeito "bounce", ou quicar, é uma simulação de uma colisão elástica, onde um objeto inverte sua velocidade ao atingir uma superfície. Em uma colisão perfeitamente elástica, a energia cinética é conservada. Em P5.js, a maneira mais simples de simular isso é detectar quando um objeto atinge um limite (como a borda da tela) e inverter o componente de sua velocidade que é perpendicular a essa superfície. Por exemplo, ao atingir o chão, a velocidade vertical (`vy`) é multiplicada por -1.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/28 - Colisões.png" alt="Efeito Bounce (Colisão Elástica) em P5.js">
+                </div>
+                <div class="lesson-links">
+                    <a href="https://www.youtube.com/watch?v=m7hHSarABFI" target="_blank">Vídeo Aula</a>
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Para um efeito de "bounce" mais realista, pode-se introduzir um "coeficiente de restituição" (um valor entre 0 e 1). Em vez de simplesmente inverter a velocidade (`velocidade = velocidade * -1`), você a multiplicaria por este coeficiente (`velocidade = velocidade * -coeficiente`). Um coeficiente de 1 representa uma colisão perfeitamente elástica (quica de volta à mesma altura), enquanto um valor menor que 1 simula uma colisão inelástica, onde parte da energia é perdida e o objeto quica cada vez mais baixo.
+                </div>
+            </div>
+
+
+            <div class="lesson">
+                <h2>9. Força Gravitacional Universal em P5.js</h2>
+                <p class="lesson-summary">A Lei da Gravitação Universal de Newton descreve a força de atração entre dois objetos com massa. A força é diretamente proporcional ao produto de suas massas e inversamente proporcional ao quadrado da distância entre eles. Em P5.js, isso nos permite simular sistemas planetários, órbitas de satélites ou a atração entre múltiplos corpos em um jogo, aplicando uma força a cada objeto que "puxa" em direção ao outro.</p>
+                <div class="lesson-image">
+                    <img src="img/MateriaisDasAulas/29 - Momento Linear.png" alt="Força Gravitacional Universal em P5.js">
+                </div>
+                <div class="lesson-links">
+                    <a href="javascript:void(0)">Exercício Complementar</a>
+                </div>
+                <div class="lesson-note">
+                    <strong>Observação:</strong> Para implementar a gravidade universal em P5.js, você precisa: 1) Calcular o vetor de direção do objeto A para o objeto B. 2) Calcular a distância entre eles. 3) Calcular a magnitude da força usando a fórmula `F = (G * m1 * m2) / (distancia * distancia)`. 4) Aplicar essa força ao objeto A na direção do objeto B (e vice-versa). O `G` é a constante gravitacional, que pode ser ajustada para obter o efeito desejado na simulação.
+                </div>
+            </div>
         </div>
     </section>
 

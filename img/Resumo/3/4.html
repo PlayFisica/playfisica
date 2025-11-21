@@ -745,27 +745,17 @@
     <section class="materials" id="material">
         <div class="materials-container">
             <div class="lesson">
-                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente
-                    proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem
-                    ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para
-                    a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para
-                    encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a
-                    cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um
-                    Movimento Retilíneo Uniformemente Variado (MRUV).</p>
+                <h2>4. Força de Atrito e Aplicação em P5.js</h2>
+                <p class="lesson-summary">A Força de Atrito é uma força que se opõe ao movimento relativo entre duas superfícies em contato. Ela é fundamental para entender por que objetos param ou por que é preciso aplicar uma força contínua para mantê-los em movimento. Em P5.js, podemos simular o atrito aplicando uma força que atua na direção oposta à velocidade do objeto, com uma magnitude proporcional à força normal e ao coeficiente de atrito. Isso adiciona realismo às simulações, fazendo com que objetos desacelerem e parem naturalmente.</p>
                 <div class="lesson-image">
-                    <img src="../../../img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
+                    <img src="../../../img/MateriaisDasAulas/24 - Forca_de_Atrito.png" alt="Força de Atrito e sua aplicação em P5.js">
                 </div>
                 <div class="lesson-links">
-                    <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
+                    <a href="https://www.youtube.com/watch?v=oUxfT7Ri7q0" target="_blank">Vídeo Aula</a>
                     <a href="javascript:void(0)">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa
-                    (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade
-                    = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas
-                    etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o
-                    objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
+                    <strong>Observação:</strong> A força de atrito é essencial para simular ambientes realistas. Em P5.js, para implementá-la, você precisará calcular a força normal (geralmente igual à força peso em superfícies planas), multiplicar pelo coeficiente de atrito e aplicar essa força na direção oposta ao vetor de velocidade do objeto. Isso fará com que o objeto perca energia e desacelere, simulando o comportamento de objetos em superfícies reais.
                 </div>
             </div>
         </div>

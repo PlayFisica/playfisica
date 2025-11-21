@@ -744,30 +744,23 @@
 <body>
     <section class="materials" id="material">
         <div class="materials-container">
+
+
             <div class="lesson">
-                <h2>2. Segunda Lei de Newton e Aplicação em P5.js</h2>
-                <p class="lesson-summary">A Segunda Lei de Newton estabelece que a aceleração de um objeto é diretamente
-                    proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa. A imagem
-                    ilustra essa relação com a fórmula F = m * a, que pode ser rearranjada para a = F / m, crucial para
-                    a aplicação em P5.js. No contexto da programação, nossa missão é traduzir essa fórmula para
-                    encontrar a aceleração, e com ela, atualizar a velocidade e, consequentemente, a posição do objeto a
-                    cada "frame". Isso permite simular o movimento de um objeto quando uma força é aplicada, gerando um
-                    Movimento Retilíneo Uniformemente Variado (MRUV).</p>
+                <h2>6. Tração e Força Elástica em P5.js</h2>
+                <p class="lesson-summary">A Força de Tração é transmitida através de cordas ou cabos quando são puxados, enquanto a Força Elástica surge em molas ou objetos elásticos quando são deformados (esticados ou comprimidos). Em P5.js, podemos simular a tração para criar pêndulos ou conectar objetos, e a força elástica (usando a Lei de Hooke) para criar sistemas de molas, suspensões de veículos ou comportamentos de "quicar" realistas.</p>
                 <div class="lesson-image">
-                    <img src="../../../img/MateriaisDasAulas/22 - 2_Lei_Newton.png" alt="Operações com IF">
+                    <img src="../../../img/MateriaisDasAulas/26 - Outras Forças.png" alt="Tração e Força Elástica em P5.js">
                 </div>
                 <div class="lesson-links">
-                    <a href="https://www.youtube.com/watch?v=tIfvN0NnYMg" target="_blank">Vídeo Aula</a>
+                    <a href="https://www.youtube.com/watch?v=UIeMNLA02PM" target="_blank">Vídeo Aula</a>
                     <a href="javascript:void(0)">Exercício Complementar</a>
                 </div>
                 <div class="lesson-note">
-                    <strong>Observação:</strong> Note como a aceleração é calculada a partir da força e da massa
-                    (aceleracao = forca / massa), e como essa aceleração é usada para atualizar a velocidade (velocidade
-                    = velocidade + aceleracao) e, em seguida, a posição (posicao = posicao + velocidade) em P5.js. Essas
-                    etapas são a base para simular o movimento de objetos sob a influência de forças, garantindo que o
-                    objeto se mova e mude sua velocidade de acordo com a Segunda Lei de Newton.
+                    <strong>Observação:</strong> Para simular a força elástica (Lei de Hooke), a fórmula é `F = -k * x`, onde `k` é a constante da mola e `x` é o deslocamento a partir da posição de repouso. Em P5.js, você calcula o vetor de deslocamento entre o objeto e o ponto de ancoragem da mola, determina sua magnitude e aplica uma força na direção oposta, proporcional a essa magnitude. Isso cria um movimento oscilatório característico.
                 </div>
             </div>
+
         </div>
     </section>
 </body>
